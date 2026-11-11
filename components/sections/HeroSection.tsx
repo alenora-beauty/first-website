@@ -127,20 +127,18 @@ export default function HeroSection() {
 
         {/* Clear natural lighting: subtle top & bottom edge vignetting only (zero brownish wash over center image) */}
         <div className="absolute top-0 inset-x-0 h-24 bg-gradient-to-b from-black/40 via-black/15 to-transparent z-10 pointer-events-none" />
-        <div className="absolute bottom-0 inset-x-0 h-36 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10 pointer-events-none" />
+        <div className="absolute bottom-0 inset-x-0 h-44 sm:h-36 bg-gradient-to-t from-black/75 via-black/25 to-transparent z-10 pointer-events-none" />
       </div>
 
-      {/* Main Content Area */}
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-40 pb-16 flex-1 flex flex-col justify-center w-full">
-        <div className="max-w-3xl space-y-6">
+      {/* Main Content Area - Anchored gracefully on mobile to keep photography unobstructed */}
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-40 pb-6 sm:pb-16 flex-1 flex flex-col justify-end sm:justify-center w-full">
+        <div className="max-w-3xl space-y-3.5 sm:space-y-6">
           {/* Eyebrow & Index */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-
           >
-
           </motion.div>
 
           {/* Large Serif Headline */}
@@ -148,7 +146,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-normal leading-[1.05] tracking-tight text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.85)]"
+            className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal leading-[1.08] sm:leading-[1.05] tracking-tight text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.85)]"
           >
             Adore your dreams.
           </motion.h1>
@@ -158,9 +156,9 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="max-w-2xl bg-black/35 backdrop-blur-md p-5 rounded-2xl border border-white/15 shadow-glass"
+            className="max-w-2xl bg-black/35 backdrop-blur-md p-3.5 sm:p-5 rounded-xl sm:rounded-2xl border border-white/15 shadow-glass"
           >
-            <p className="text-base sm:text-lg text-white font-sans leading-relaxed font-normal drop-shadow-[0_1px_6px_rgba(0,0,0,0.7)]">
+            <p className="text-xs sm:text-base md:text-lg text-white font-sans leading-relaxed font-normal drop-shadow-[0_1px_6px_rgba(0,0,0,0.7)]">
               Certified cosmetologists for skin, hair and bridal makeovers. Made
               personal, for women, men and kids in East Hill, Kozhikode.
             </p>
@@ -171,28 +169,33 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="pt-2 flex flex-wrap items-center gap-4 sm:gap-6"
+            className="pt-1 sm:pt-2 flex flex-row items-center gap-3 sm:gap-6"
           >
-            <Button href="/#booking" variant="gold" size="lg" className="shadow-elevated">
+            <Button
+              href="/#booking"
+              variant="gold"
+              size="lg"
+              className="shadow-elevated px-5 py-2.5 sm:px-8 sm:py-4 text-xs sm:text-base"
+            >
               Book Now
             </Button>
             <Button
               href="/services"
               variant="dark"
               size="lg"
-              className="group shadow-elevated bg-white/95 text-espresso hover:bg-white"
+              className="group shadow-elevated bg-white/95 text-espresso hover:bg-white px-4 py-2.5 sm:px-8 sm:py-4 text-xs sm:text-base"
             >
               <span>Explore Services</span>
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 ml-1.5 sm:ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </motion.div>
         </div>
 
-        {/* Carousel Navigation Bar (Segmented slide indicators & controls) */}
-        <div className="mt-12 flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-6 border-t border-white/15">
+        {/* Carousel Navigation Bar (Clean single-row layout on mobile, full controls on desktop) */}
+        <div className="mt-4 sm:mt-12 flex items-center justify-between gap-3 pt-3 sm:pt-6 border-t border-white/15">
           {/* Active slide badge */}
-          <div className="flex items-center gap-3">
-            <span className="font-mono text-xs uppercase tracking-widest text-gold bg-black/55 backdrop-blur-md px-3 py-1 rounded-full border border-gold/40 font-semibold shadow-soft">
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0 min-w-0">
+            <span className="font-mono text-[11px] sm:text-xs uppercase tracking-widest text-gold bg-black/55 backdrop-blur-md px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full border border-gold/40 font-semibold shadow-soft shrink-0">
               {String(currentIndex + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}
             </span>
             <AnimatePresence mode="wait">
@@ -202,15 +205,15 @@ export default function HeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -3 }}
                 transition={{ duration: 0.25 }}
-                className="text-xs text-white font-sans tracking-wide drop-shadow-[0_1px_4px_rgba(0,0,0,0.85)] font-medium"
+                className="text-xs text-white font-sans tracking-wide drop-shadow-[0_1px_4px_rgba(0,0,0,0.85)] font-medium truncate max-w-[140px] sm:max-w-none"
               >
                 {activeSlide.category}
               </motion.span>
             </AnimatePresence>
           </div>
 
-          {/* Segmented Slide Indicators */}
-          <div className="flex items-center gap-2">
+          {/* Segmented Slide Indicators - Desktop & Tablet */}
+          <div className="hidden md:flex items-center gap-2">
             {slides.map((slide, idx) => {
               const isActive = idx === currentIndex;
               return (
@@ -241,22 +244,22 @@ export default function HeroSection() {
           </div>
 
           {/* Left / Right Arrow Buttons */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
             <button
               type="button"
               onClick={prevSlide}
               aria-label="Previous banner"
-              className="w-9 h-9 rounded-full bg-black/45 backdrop-blur-md border border-white/25 text-white flex items-center justify-center hover:bg-gold hover:text-espresso hover:border-gold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold shadow-soft"
+              className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-black/45 backdrop-blur-md border border-white/25 text-white flex items-center justify-center hover:bg-gold hover:text-espresso hover:border-gold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold shadow-soft"
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
             <button
               type="button"
               onClick={nextSlide}
               aria-label="Next banner (animate left to right)"
-              className="w-9 h-9 rounded-full bg-black/45 backdrop-blur-md border border-white/25 text-white flex items-center justify-center hover:bg-gold hover:text-espresso hover:border-gold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold shadow-soft"
+              className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-black/45 backdrop-blur-md border border-white/25 text-white flex items-center justify-center hover:bg-gold hover:text-espresso hover:border-gold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold shadow-soft"
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
           </div>
         </div>

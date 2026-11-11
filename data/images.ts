@@ -37,7 +37,7 @@ export const siteImages = {
       alt: "Professional ladies hair styling, precision haircut and blow-dry in modern salon",
       category: "Ladies Hairdressing & Styling",
       fit: "cover",
-      position: "object-[center_15%]",
+      position: "object-[center_20%] sm:object-[center_15%]",
     },
     {
       id: "slide-2",
@@ -45,7 +45,7 @@ export const siteImages = {
       alt: "Precision men's hairdressing, scissor styling, fade and executive grooming in salon chair",
       category: "Men's Hairdressing & Styling",
       fit: "cover",
-      position: "object-[center_15%]",
+      position: "object-[center_22%] sm:object-[center_15%]",
     },
     {
       id: "slide-3",
@@ -53,7 +53,7 @@ export const siteImages = {
       alt: "Cheerful young child getting a gentle haircut and styling in salon chair",
       category: "Gentle Kids Haircuts & Styling",
       fit: "cover",
-      position: "object-center",
+      position: "object-[center_35%] sm:object-center",
     },
     {
       id: "slide-4",
@@ -61,7 +61,7 @@ export const siteImages = {
       alt: "Traditional Kerala silk saree draping with authentic gold zari pleats, jewellery and styling",
       category: "Artistic Saree Draping",
       fit: "contain",
-      position: "object-center lg:object-[68%_center]",
+      position: "object-[center_30%] sm:object-center lg:object-[68%_center]",
       bgColor: "#7A0313",
     },
     {
@@ -70,7 +70,7 @@ export const siteImages = {
       alt: "Dimensional sunlit caramel balayage, hair highlights and luxury hair care finish",
       category: "Highlights & Balayage",
       fit: "cover",
-      position: "object-[center_15%]",
+      position: "object-[center_20%] sm:object-[center_15%]",
     },
     {
       id: "slide-6",
@@ -78,7 +78,7 @@ export const siteImages = {
       alt: "Stylist applying hair spa treatment and restorative conditioning",
       category: "Restorative Hair Spa",
       fit: "cover",
-      position: "object-[center_15%]",
+      position: "object-[center_25%] sm:object-[center_15%]",
     },
     {
       id: "slide-7",
