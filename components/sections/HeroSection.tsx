@@ -46,11 +46,11 @@ export default function HeroSection() {
     img.src = slides[nextIdx].url;
   }, [currentIndex, slides]);
 
-  // Consistent 4-second slide cycle: advances every 4000ms
+  // Consistent 3.5-second slide cycle: advances every 3500ms
   useEffect(() => {
     const timer = setInterval(() => {
       nextSlide();
-    }, 4000);
+    }, 3500);
     return () => clearInterval(timer);
   }, [currentIndex, nextSlide]);
 
