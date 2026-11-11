@@ -46,11 +46,11 @@ export default function HeroSection() {
     img.src = slides[nextIdx].url;
   }, [currentIndex, slides]);
 
-  // Strict 2-second slide cycle: advances every 2000ms without mouse-hover freeze
+  // Consistent 4-second slide cycle: advances every 4000ms
   useEffect(() => {
     const timer = setInterval(() => {
       nextSlide();
-    }, 2000);
+    }, 4000);
     return () => clearInterval(timer);
   }, [currentIndex, nextSlide]);
 
