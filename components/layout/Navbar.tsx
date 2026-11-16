@@ -92,7 +92,7 @@ export default function Navbar() {
             aria-label="Main Navigation"
             className={`hidden md:flex items-center transition-all duration-300 h-[46px] ${
               scrolled || !isHome
-                ? "space-x-8"
+                ? "space-x-5 lg:space-x-8"
                 : "space-x-1 bg-espresso/90 backdrop-blur-md px-5 rounded-full border border-gold/35 shadow-soft"
             }`}
           >

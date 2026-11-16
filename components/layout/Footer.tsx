@@ -115,6 +115,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/bridal-studio"
+                  className="text-gold font-medium hover:text-gold-light transition-colors"
+                >
+                  Bridal Studio
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/services"
                   className="text-ivory/70 hover:text-ivory transition-colors"
                 >

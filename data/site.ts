@@ -102,7 +102,7 @@ export const siteConfig: SiteConfig = {
   showReviews: false,
   navLinks: [
     { label: "About", href: "/about" },
-    { label: "Studio", href: "/#studio" },
+    { label: "Bridal Studio", href: "/bridal-studio" },
     { label: "Services", href: "/services" },
     { label: "Gallery", href: "/gallery" },
     { label: "Contact", href: "/contact" },
