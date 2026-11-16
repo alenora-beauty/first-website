@@ -198,90 +198,132 @@ export default function BridalStudioPage() {
 
   return (
     <div className="pt-28 pb-20 bg-ivory text-espresso">
-      {/* 1. Grand Bridal Hero Section */}
-      <section className="relative min-h-[85vh] sm:min-h-[90vh] flex flex-col justify-center overflow-hidden bg-espresso text-ivory">
-        {/* Background Image with Warm Vignette */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=2000&q=85"
-            alt="Alenora Bridal Studio authentic Kerala Muhurtham bride with silk saree pleats and traditional jewelry"
-            fill
-            priority
-            quality={90}
-            sizes="100vw"
-            className="object-cover object-[center_25%] sm:object-[center_20%] opacity-45"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-espresso via-espresso/60 to-espresso/40" />
-          <div className="absolute inset-0 bg-radial-gradient opacity-30 pointer-events-none" />
-        </div>
+      {/* 1. Couture Editorial Bridal Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-cream via-cream to-ivory border-b border-hairline pt-6 sm:pt-12 pb-16 sm:pb-24">
+        {/* Subtle Luxury Pattern / Glow Backdrop */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/10 rounded-full blur-3xl pointer-events-none -mr-40 -mt-20" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-terracotta/5 rounded-full blur-3xl pointer-events-none -ml-20 -mb-20" />
 
-        {/* Content Container */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 flex flex-col justify-center">
-          <div className="max-w-3xl space-y-6">
-            {/* Eyebrow Pill */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold/15 border border-gold/40 backdrop-blur-md">
-              <Crown className="w-3.5 h-3.5 text-gold" />
-              <span className="text-[11px] sm:text-xs font-mono uppercase tracking-[0.25em] text-gold font-semibold">
-                The Bridal Sanctuary • East Hill, Kozhikode
-              </span>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            {/* Left Column: Refined Editorial Typography (7 cols on lg) */}
+            <div className="lg:col-span-7 space-y-6 sm:space-y-7">
+              {/* Eyebrow Pill */}
+              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/80 border border-gold/40 shadow-soft backdrop-blur-sm">
+                <Crown className="w-3.5 h-3.5 text-gold shrink-0" />
+                <span className="text-[11px] sm:text-xs font-mono uppercase tracking-[0.22em] text-coffee font-semibold">
+                  The Bridal Atelier • East Hill, Kozhikode
+                </span>
+              </div>
+
+              {/* Commanding Luxury Headline */}
+              <div className="space-y-2">
+                <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal text-espresso leading-[1.08] tracking-tight">
+                  Where the bride is <span className="italic font-normal text-terracotta">celebrated</span>, not rushed.
+                </h1>
+              </div>
+
+              {/* Editorial Description */}
+              <p className="text-base sm:text-lg text-muted font-sans leading-relaxed max-w-2xl">
+                At Alenora, the bride is our primary muse. We combine certified cosmetic science with Kerala’s finest
+                wedding traditions—delivering 18-hour sweat-proof HD makeovers, crease-proof Kanjeevaram silk
+                pleating, authentic Madurai jasmine braid couture, and complete dressing in our private luxury suite.
+              </p>
+
+              {/* Trust Badges Grid */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-1 text-xs font-sans">
+                <div className="p-3 rounded-xl bg-white/70 border border-hairline shadow-soft flex items-center gap-2.5">
+                  <ShieldCheck className="w-4 h-4 text-gold shrink-0" />
+                  <span className="font-medium text-espresso">18-Hr Cry &amp; Sweat Proof</span>
+                </div>
+                <div className="p-3 rounded-xl bg-white/70 border border-hairline shadow-soft flex items-center gap-2.5">
+                  <Heart className="w-4 h-4 text-gold shrink-0" />
+                  <span className="font-medium text-espresso">1-on-1 Private Suite</span>
+                </div>
+                <div className="p-3 rounded-xl bg-white/70 border border-hairline shadow-soft flex items-center gap-2.5 col-span-2 sm:col-span-1">
+                  <Sparkles className="w-4 h-4 text-gold shrink-0" />
+                  <span className="font-medium text-espresso">Groom Styling Paired</span>
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="pt-2 flex flex-wrap items-center gap-4 sm:gap-6">
+                <Button
+                  href={buildWhatsAppLink(bridalWhatsAppMessage)}
+                  external
+                  variant="gold"
+                  size="lg"
+                  className="shadow-elevated px-7 py-3.5 text-sm sm:text-base font-semibold"
+                >
+                  <MessageCircle className="w-4 h-4 mr-2" />
+                  <span>Reserve Bridal Consultation</span>
+                </Button>
+                <Button
+                  href="#packages"
+                  variant="secondary"
+                  size="lg"
+                  className="shadow-soft px-7 py-3.5 text-sm sm:text-base font-medium"
+                >
+                  <span>Explore Packages ↓</span>
+                </Button>
+              </div>
+
+              {/* Reassurance Footer Line */}
+              <div className="pt-3 flex items-center gap-2 text-xs text-muted font-sans border-t border-hairline">
+                <Gem className="w-3.5 h-3.5 text-gold shrink-0" />
+                <span>
+                  Strictly 1 bride per time slot • Dior, MAC, Charlotte Tilbury &amp; Bobbi Brown formulations only.
+                </span>
+              </div>
             </div>
 
-            {/* Main Serif Headline */}
-            <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal leading-[1.08] tracking-tight text-ivory drop-shadow-[0_4px_24px_rgba(0,0,0,0.9)]">
-              Where Every Bride&apos;s Dream Look Becomes Heirloom Art.
-            </h1>
+            {/* Right Column: Layered Editorial Bridal Visual Composition (5 cols on lg) */}
+            <div className="lg:col-span-5 relative mt-6 lg:mt-0">
+              {/* Outer Decorative Gold Frame Accent */}
+              <div className="absolute -inset-2 rounded-salon-lg bg-gradient-to-br from-gold/25 via-gold/5 to-transparent blur-sm pointer-events-none" />
 
-            {/* Subtext */}
-            <p className="text-base sm:text-lg text-ivory/85 font-sans leading-relaxed max-w-2xl drop-shadow-[0_1px_6px_rgba(0,0,0,0.8)]">
-              At Alenora, the bride is our primary muse. Combining certified cosmetic science with Kerala&apos;s
-              finest wedding traditions, we craft sweat-resistant 18-hour HD makeovers, crease-proof silk saree
-              draping, authentic jasmine braid couture, and complete dressing in our private luxury bridal suite.
-            </p>
+              {/* Main Bridal Portrait Card */}
+              <div className="relative h-[480px] sm:h-[560px] lg:h-[600px] rounded-salon-lg overflow-hidden shadow-elevated border-2 border-gold/40 bg-espresso group">
+                <Image
+                  src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&q=85"
+                  alt="Alenora Bridal Studio authentic Kerala Muhurtham bride with gold zari Kanjeevaram and temple jewelry"
+                  fill
+                  priority
+                  quality={90}
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                  className="object-cover object-[center_20%] group-hover:scale-105 transition-transform duration-700 ease-out"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-espresso/85 via-espresso/15 to-transparent pointer-events-none" />
 
-            {/* Action Buttons */}
-            <div className="pt-4 flex flex-wrap items-center gap-4 sm:gap-6">
-              <Button
-                href={buildWhatsAppLink(bridalWhatsAppMessage)}
-                external
-                variant="gold"
-                size="lg"
-                className="shadow-elevated px-7 py-3.5 text-sm sm:text-base font-semibold"
-              >
-                <MessageCircle className="w-4 h-4 mr-2" />
-                <span>Reserve Bridal Consultation</span>
-              </Button>
-              <Button
-                href="#packages"
-                variant="dark"
-                size="lg"
-                className="shadow-elevated bg-white/95 text-espresso hover:bg-white px-7 py-3.5 text-sm sm:text-base"
-              >
-                <span>View Bridal Packages</span>
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </div>
-          </div>
-        </div>
+                {/* Floating Badge Top-Right */}
+                <div className="absolute top-4 right-4 bg-espresso/85 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-gold/40 shadow-soft">
+                  <span className="text-[11px] font-mono uppercase tracking-widest text-gold font-semibold flex items-center gap-1.5">
+                    <Crown className="w-3 h-3 text-gold" />
+                    Muhurtham Special
+                  </span>
+                </div>
 
-        {/* Bottom Trust Indicators Ribbon */}
-        <div className="relative z-10 border-t border-white/15 bg-black/50 backdrop-blur-md py-4">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center sm:text-left">
-              <div className="flex items-center justify-center sm:justify-start gap-2.5 text-xs text-ivory/90 font-sans tracking-wide">
-                <CheckCircle2 className="w-4 h-4 text-gold shrink-0" />
-                <span>Private 1-on-1 Bridal Suite</span>
+                {/* Bottom Story Card on Image */}
+                <div className="absolute bottom-5 inset-x-5 p-4 rounded-xl bg-black/55 backdrop-blur-md border border-white/20 text-ivory space-y-1 shadow-glass">
+                  <div className="flex items-center justify-between text-xs text-gold font-mono uppercase tracking-wider font-semibold">
+                    <span>Signature Bridal Glam</span>
+                    <span>18-Hr Wear</span>
+                  </div>
+                  <p className="text-xs text-ivory/90 font-sans leading-relaxed">
+                    Crease-proof Kanjeevaram pleating, temple gold eye look &amp; fresh Madurai jasmine hair setting.
+                  </p>
+                </div>
               </div>
-              <div className="flex items-center justify-center sm:justify-start gap-2.5 text-xs text-ivory/90 font-sans tracking-wide">
-                <ShieldCheck className="w-4 h-4 text-gold shrink-0" />
-                <span>18-Hour Humidity &amp; Cry-Proof Base</span>
-              </div>
-              <div className="flex items-center justify-center sm:justify-start gap-2.5 text-xs text-ivory/90 font-sans tracking-wide">
-                <Flower2 className="w-4 h-4 text-gold shrink-0" />
-                <span>Master Saree Draping &amp; Hair Art</span>
-              </div>
-              <div className="flex items-center justify-center sm:justify-start gap-2.5 text-xs text-ivory/90 font-sans tracking-wide">
-                <Sparkles className="w-4 h-4 text-gold shrink-0" />
-                <span>Groom &amp; Couple Styling Paired</span>
+
+              {/* Floating Decorative Inset Card (Bottom-Left overlap on lg) */}
+              <div className="hidden sm:flex items-center gap-3.5 absolute -bottom-5 -left-6 bg-ivory p-3.5 rounded-2xl shadow-elevated border border-hairline max-w-[240px]">
+                <div className="w-10 h-10 rounded-full bg-gold/15 flex items-center justify-center shrink-0 border border-gold/30">
+                  <Flower2 className="w-5 h-5 text-gold" />
+                </div>
+                <div>
+                  <strong className="block text-xs font-semibold text-espresso">Heirloom Finish</strong>
+                  <span className="text-[11px] text-muted leading-tight block">Zero flashback under 4K lenses</span>
+                </div>
               </div>
             </div>
           </div>
@@ -702,3 +744,4 @@ export default function BridalStudioPage() {
     </div>
   );
 }
+
