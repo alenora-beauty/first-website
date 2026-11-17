@@ -191,29 +191,10 @@ export default function HeroSection() {
           </motion.div>
         </div>
 
-        {/* Carousel Navigation Bar (Clean single-row layout on mobile, full controls on desktop) */}
+        {/* Carousel Navigation Bar (Indicators on left, controls on right) */}
         <div className="mt-4 sm:mt-12 flex items-center justify-between gap-3 pt-3 sm:pt-6 border-t border-white/15">
-          {/* Active slide badge */}
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0 min-w-0">
-            <span className="font-mono text-[11px] sm:text-xs uppercase tracking-widest text-gold bg-black/55 backdrop-blur-md px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full border border-gold/40 font-semibold shadow-soft shrink-0">
-              {String(currentIndex + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}
-            </span>
-            <AnimatePresence mode="wait">
-              <motion.span
-                key={activeSlide.id}
-                initial={{ opacity: 0, y: 3 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -3 }}
-                transition={{ duration: 0.25 }}
-                className="text-xs text-white font-sans tracking-wide drop-shadow-[0_1px_4px_rgba(0,0,0,0.85)] font-medium truncate max-w-[140px] sm:max-w-none"
-              >
-                {activeSlide.category}
-              </motion.span>
-            </AnimatePresence>
-          </div>
-
-          {/* Segmented Slide Indicators - Desktop & Tablet */}
-          <div className="hidden md:flex items-center gap-2">
+          {/* Segmented Slide Indicators */}
+          <div className="flex items-center gap-2">
             {slides.map((slide, idx) => {
               const isActive = idx === currentIndex;
               return (
@@ -224,7 +205,7 @@ export default function HeroSection() {
                     setDirection(idx > currentIndex ? "left-to-right" : "right-to-left");
                     setCurrentIndex(idx);
                   }}
-                  aria-label={`Go to slide ${idx + 1}: ${slide.category}`}
+                  aria-label={`Go to slide ${idx + 1}`}
                   className="relative h-2 rounded-full transition-all duration-300 overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-gold"
                   style={{
                     width: isActive ? "44px" : "14px",
