@@ -59,8 +59,8 @@ export default function TransformationsSection() {
               className="shadow-elevated border border-hairline"
             />
             <div className="mt-2 text-right">
-              <span className="text-[11px] font-mono text-terracotta bg-terracotta/10 px-2.5 py-0.5 rounded-full">
-                Placeholder &mdash; To be replaced with studio photos
+              <span className="text-[11px] font-mono text-terracotta/60 bg-terracotta/5 px-2.5 py-0.5 rounded-full">
+                Before &amp; After — Alenora Beauty Studio
               </span>
             </div>
           </div>

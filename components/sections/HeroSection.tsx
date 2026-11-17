@@ -92,7 +92,7 @@ export default function HeroSection() {
             exit="exit"
             className="absolute inset-0 w-full h-full overflow-hidden transform-gpu"
             style={{
-              backgroundColor: activeSlide.bgColor || "#050505",
+              backgroundColor: (activeSlide as any).bgColor || "#050505",
               willChange: "transform",
             }}
           >

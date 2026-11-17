@@ -40,8 +40,8 @@ const bridalPillars = [
       "Smudge-proof kajal, winged liner, and weightless silk lashes",
       "Long-lasting sweat & tear resistant formulation",
     ],
-    image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&q=85",
-    alt: "Traditional Kerala Muhurtham bride with gold temple jewellery and dewy skin finish",
+    image: "/studio-images/bridal-white-silver-lehenga.jpeg",
+    alt: "Alenora bridal makeover — full bridal look with jewellery and saree styling",
   },
   {
     number: "02",
@@ -55,8 +55,8 @@ const bridalPillars = [
       "Oddiyanam (waistband) anchoring that prevents sagging",
       "Engineered comfort for sitting, walking, and greeting guests effortlessly",
     ],
-    image: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=1200&q=85",
-    alt: "Impeccable Kanjeevaram silk saree pleat setting and bridal drape",
+    image: "/studio-images/kerala-bride-red-kasavu-wall.jpeg",
+    alt: "Traditional Kerala bride in red kasavu saree — Alenora master saree draping",
   },
   {
     number: "03",
@@ -70,8 +70,8 @@ const bridalPillars = [
       "Crown, tiara, and Christian lace veil anchoring",
       "Zero frizz guarantee even during outdoor ceremonies",
     ],
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1200&q=85",
-    alt: "Bridal hair styling with authentic jasmine flowers and bridal accessories",
+    image: "/studio-images/kerala-bride-floral-hair.jpeg",
+    alt: "Kerala bride with traditional floral jasmine hair braid and gold jewellery — Alenora",
   },
   {
     number: "04",
@@ -85,8 +85,8 @@ const bridalPillars = [
       "Both hands (elbow length) and feet coverage",
       "Complimentary after-care seal balm for maximum color intensity",
     ],
-    image: "https://images.unsplash.com/photo-1583001809873-a128495da465?auto=format&fit=crop&w=1200&q=85",
-    alt: "Intricate organic bridal mehendi artistry on hands and wrists",
+    image: "/studio-images/bride-pink-lehenga-outdoor.jpeg",
+    alt: "Bride with intricate organic mehendi and floral jewellery — Alenora bridal artistry",
   },
   {
     number: "05",
@@ -100,8 +100,8 @@ const bridalPillars = [
       "Earring support & invisible earlobe relief tape",
       "Final 360-degree mirrors and photoshoot-ready touch-up",
     ],
-    image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=1200&q=85",
-    alt: "Bridal dressing and heirloom jewellery placement",
+    image: "/studio-images/bridal-trio-white-gown.jpeg",
+    alt: "Bridal party fully dressed — Alenora complete dressing and jewellery setting",
   },
   {
     number: "06",
@@ -115,8 +115,8 @@ const bridalPillars = [
       "Restorative botanical hair spa for glossy, manageable locks",
       "Full body detan, gentle exfoliation & relaxation massage",
     ],
-    image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=85",
-    alt: "Pre-bridal clinical facial and skin brightening prep",
+    image: "/studio-images/bridal-makeup-artist-working.jpeg",
+    alt: "Alenora cosmetologist applying pre-bridal skin care and makeup — 30-day radiance countdown",
   },
 ];
 
@@ -285,8 +285,8 @@ export default function BridalStudioPage() {
               {/* Main Bridal Portrait Card */}
               <div className="relative h-[480px] sm:h-[560px] lg:h-[600px] rounded-salon-lg overflow-hidden shadow-elevated border-2 border-gold/40 bg-espresso group">
                 <Image
-                  src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&q=85"
-                  alt="Alenora Bridal Studio authentic Kerala Muhurtham bride with gold zari Kanjeevaram and temple jewelry"
+                  src="/studio-images/kerala-bride-kanjeevaram-silk.jpeg"
+                  alt="Alenora Bridal Studio — Kerala Muhurtham bride in Kanjeevaram silk with temple jewellery"
                   fill
                   priority
                   quality={90}
@@ -337,8 +337,8 @@ export default function BridalStudioPage() {
             {/* Visual Showcase Card */}
             <div className="lg:col-span-6 relative h-[480px] sm:h-[580px] rounded-salon overflow-hidden shadow-elevated border border-hairline bg-espresso">
               <Image
-                src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=1200&q=85"
-                alt="Alenora Bridal Makeover signature bridal glow and jewelry setting"
+                src="/studio-images/kerala-bride-red-kasavu-outdoor.jpeg"
+                alt="Alenora Bridal Makeover — traditional Kerala bride in red kasavu with gold jewellery"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center"
@@ -529,8 +529,8 @@ export default function BridalStudioPage() {
             {/* Right Visual Image */}
             <div className="lg:col-span-5 relative h-[420px] sm:h-[500px] rounded-salon overflow-hidden shadow-elevated border border-gold/30">
               <Image
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80"
-                alt="Groom wedding preparation and styling at Alenora Beauty Studio"
+                src="/studio-images/groom-portrait-white-mundu.jpeg"
+                alt="Groom in traditional white mundu — Alenora wedding day grooming and styling"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover object-center"
