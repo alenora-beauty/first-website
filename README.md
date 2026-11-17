@@ -15,6 +15,7 @@ Al-Enora/
 │   │   └── booking/
 │   │       └── route.ts          # API endpoint handling appointment form submissions
 │   ├── about/page.tsx            # /about: Story, philosophy & cosmetology standards
+│   ├── bridal-studio/page.tsx    # /bridal-studio: Dedicated Bridal Studio & Makeover editorial showcase
 │   ├── services/page.tsx         # /services: Complete categorized menu & package offers
 │   ├── gallery/page.tsx          # /gallery: Filterable visual journal & Instagram link
 │   ├── contact/page.tsx          # /contact: Address, map, hours & direct WhatsApp
