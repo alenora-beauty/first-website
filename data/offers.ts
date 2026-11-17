@@ -14,40 +14,39 @@ export interface StudioOffer {
 
 export const studioOffers: StudioOffer[] = [
   {
-    id: "groom-signature-package",
-    badge: "Most Booked",
-    title: "Signature Groom Makeover Package",
-    tagline: "Head-to-toe ceremony grooming at Kozhikode's premium unisex salon",
-    originalPrice: 4999, // TO CONFIRM
-    offerPrice: 3499, // TO CONFIRM
-    priceNote: "Offer price TO CONFIRM with studio",
+    id: "bridal-special-package",
+    badge: "Official Brochure Package",
+    title: "Bridal Special Package",
+    tagline: "Comprehensive 5-in-1 head-to-toe pre-wedding ritual",
+    offerPrice: 9300,
+    priceNote: "Official Brochure Rate",
     highlights: [
-      "Precision haircut & wash",
-      "Beard sculpting & razor edge",
-      "Brightening facial & detan",
-      "Botanical hair spa with pressure massage",
-      "Reflexology pedicure",
+      "Facial with De-Tan Pack",
+      "Under Eye Treatment",
+      "Specialized Lip Care",
+      "Pedicure and Manicure",
+      "Restorative Hair Spa",
     ],
     whatsAppMessage:
-      "Hi Alenora, I'm interested in booking the Signature Groom Package (₹3,499 offer). Please share available dates.",
-    expiresText: "Limited slots per wedding season weekend",
+      "Hi Alenora, I'd like to book the Bridal Special Package (₹9,300) from your brochure. Please share available dates.",
+    expiresText: "Advance booking recommended for wedding season",
   },
   {
-    id: "bridal-booking-enquiry",
-    badge: "Wedding Season 2024–2025",
-    title: "Bridal Muhurtham & Reception Packages",
-    tagline: "Custom consultation, skin prep trial, and on-venue or in-studio bookings",
-    priceNote: "Bespoke packages starting from ₹12,000 (TO CONFIRM)",
+    id: "saree-draping-service",
+    badge: "Official Rate Card",
+    title: "Master Saree Draping & Box Folding",
+    tagline: "Pin-perfect pleats and pre-event steam box folding",
+    offerPrice: 1000,
+    priceNote: "Starting from ₹1,000",
     highlights: [
-      "HD waterproof long-wear bridal makeup",
-      "Master saree pleating & pin-set",
-      "Fresh floral or contemporary jasmine hair braiding",
-      "Full hands & feet bridal mehendi",
-      "Special discounts for bridesmaid & family packages",
+      "Saree Draping (Without Pleats): ₹1,000",
+      "Saree Draping (With Pleats): ₹1,500",
+      "Saree Box Folding & Steam Press: ₹1,000",
+      "Secure anchoring for Kanjeevaram & Kasavu silks",
+      "Comfort guaranteed for all-day ceremony wear",
     ],
     whatsAppMessage:
-      "Hi Alenora, I'd like to enquire about bridal makeover availability and package pricing for my upcoming wedding.",
-    expiresText: "Advance booking recommended 30–60 days prior",
+      "Hi Alenora, I'd like to book saree draping / box folding services. Please share available time slots.",
+    expiresText: "Available in-studio at East Hill, Kozhikode",
   },
 ];
-

@@ -373,15 +373,15 @@ export default function BookingSection() {
                       }`}
                     >
                       <option value="">-- Choose a service --</option>
-                      <option value="Signature Groom Package (Offer ₹3,499)">
-                        ★ Featured: Signature Groom Package (₹3,499)
+                      <option value="Bridal Special Package (₹9,300)">
+                        ★ Featured: Bridal Special Package (₹9,300)
                       </option>
                       <option value="Bridal Makeover & Saree Draping">
-                        ★ Bridal Makeover &amp; Saree Draping Enquiry
+                        ★ Bridal Makeover &amp; Saree Draping
                       </option>
                       {allServices.map((srv, idx) => (
                         <option key={idx} value={srv.name}>
-                          {srv.name} (from ₹{srv.priceFrom})
+                          {srv.name} {srv.priceFrom > 0 ? `(₹${srv.priceFrom})` : "(Consultation)"}
                         </option>
                       ))}
                     </select>

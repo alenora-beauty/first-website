@@ -15,10 +15,10 @@ export default function OffersSection() {
           index="10"
           eyebrow="Special Packages"
           title="Curated seasonal offerings."
-          description="Designed to offer exceptional value across comprehensive wedding prep and regular beauty maintenance. Driven directly from /data/offers.ts for effortless updates."
+          description="Designed to offer exceptional value across comprehensive wedding prep and grooming with verified studio rate card pricing."
         />
 
-        <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 max-w-5xl mx-auto gap-8">
           {studioOffers.map((offer) => (
             <div
               key={offer.id}

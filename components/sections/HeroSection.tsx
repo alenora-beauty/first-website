@@ -16,15 +16,15 @@ export default function HeroSection() {
 
   const heroTags = [
     "Hair Colour",
-    "Highlights",
-    "Hair Spa",
-    "Brightening Facials",
-    "Bridal Makeover",
+    "Highlights & Balayage",
+    "Hair Spa & Treatments",
+    "Keratin & Botox",
+    "Aroma Magic Facials",
+    "Bridal Glow",
+    "HD Bridal Makeup",
     "Saree Draping",
-    "Mehendi Art",
-    "Custom Tattoo",
-    "Groom Package",
-    "Kids Cuts",
+    "Saree Box Folding",
+    "Cheryl's Cosmeceuticals",
   ];
 
   // Advance slide left-to-right
