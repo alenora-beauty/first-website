@@ -18,7 +18,11 @@ import {
   Calendar,
 } from "lucide-react";
 
-export default function BookingSection() {
+interface BookingSectionProps {
+  index?: string;
+}
+
+export default function BookingSection({ index = "11" }: BookingSectionProps) {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -122,7 +126,7 @@ export default function BookingSection() {
     <section id="booking" className="py-24 sm:py-32 bg-ivory text-espresso">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          index="12"
+          index={index}
           eyebrow="Reserve Your Experience"
           title="Book your appointment."
           description="Send an instant reservation request or chat with our front desk on WhatsApp for prompt scheduling."

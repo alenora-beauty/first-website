@@ -6,7 +6,11 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, HelpCircle } from "lucide-react";
 
-export default function FaqSection() {
+interface FaqSectionProps {
+  index?: string;
+}
+
+export default function FaqSection({ index = "10" }: FaqSectionProps) {
   const [openId, setOpenId] = useState<string>(studioFaqs[0].id);
 
   const toggle = (id: string) => {
@@ -17,7 +21,7 @@ export default function FaqSection() {
     <section id="faq" className="py-24 sm:py-32 bg-cream text-espresso">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          index="11"
+          index={index}
           eyebrow="Help & Information"
           title="Questions, answered."
           description="Everything you need to know about our studio protocols, appointments, and specialized services in East Hill, Kozhikode."

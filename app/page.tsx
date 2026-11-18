@@ -7,7 +7,6 @@ import TeamSection from "@/components/sections/TeamSection";
 import VisitSection from "@/components/sections/VisitSection";
 import ReviewsSection from "@/components/sections/ReviewsSection";
 import GallerySection from "@/components/sections/GallerySection";
-import OffersSection from "@/components/sections/OffersSection";
 import FaqSection from "@/components/sections/FaqSection";
 import BookingSection from "@/components/sections/BookingSection";
 
@@ -41,13 +40,10 @@ export default function HomePage() {
       {/* 09. Gallery */}
       <GallerySection />
 
-      {/* 10. Offers */}
-      <OffersSection />
-
-      {/* 11. FAQ */}
+      {/* 10. FAQ */}
       <FaqSection />
 
-      {/* 12. Booking */}
+      {/* 11. Booking */}
       <BookingSection />
     </>
   );
