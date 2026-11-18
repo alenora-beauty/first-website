@@ -64,3 +64,28 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* Netlify Badge & Frame Suppression */
+#nl-badge-frame,
+#nl-hud-frame,
+#netlify-badge,
+iframe[title*="Netlify" i],
+iframe[title*="Powered by Netlify" i],
+iframe[id*="nl-"],
+iframe[src*="netlify"],
+[class*="netlify-badge"],
+netlify-drawer {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: fixed !important;
+  left: -99999px !important;
+  top: -99999px !important;
+  width: 0 !important;
+  height: 0 !important;
+  max-width: 0 !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+  z-index: -9999 !important;
+}

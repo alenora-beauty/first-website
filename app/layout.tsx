@@ -73,6 +73,42 @@ export default function RootLayout({
           rel="stylesheet"
         />
         <JsonLd />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                function stripBadge(node) {
+                  if (!node || node.nodeType !== 1) return;
+                  var id = (node.id || '').toLowerCase();
+                  var tag = (node.tagName || '').toLowerCase();
+                  var title = ((node.getAttribute && node.getAttribute('title')) || '').toLowerCase();
+                  var src = ((node.getAttribute && node.getAttribute('src')) || '').toLowerCase();
+                  if (
+                    id === 'nl-badge-frame' ||
+                    id === 'nl-hud-frame' ||
+                    id === 'netlify-badge' ||
+                    id.indexOf('nl-') === 0 ||
+                    (tag === 'iframe' && (title.indexOf('netlify') !== -1 || src.indexOf('netlify') !== -1)) ||
+                    tag === 'netlify-drawer'
+                  ) {
+                    try { node.remove(); } catch(e) { node.style.display = 'none'; }
+                  }
+                }
+                if (typeof MutationObserver !== 'undefined') {
+                  var obs = new MutationObserver(function(mutations) {
+                    for (var i = 0; i < mutations.length; i++) {
+                      var added = mutations[i].addedNodes;
+                      for (var j = 0; j < added.length; j++) {
+                        stripBadge(added[j]);
+                      }
+                    }
+                  });
+                  obs.observe(document.documentElement, { childList: true, subtree: true });
+                }
+              })();
+            `,
+          }}
+        />
       </head>
       <body className="min-h-screen bg-ivory text-espresso font-sans antialiased flex flex-col justify-between selection:bg-coffee selection:text-ivory">
         <SmoothScrollProvider>
