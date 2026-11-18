@@ -136,9 +136,9 @@ export const siteImages = {
 
   // Service Category Cover Images
   services: {
-    hair: "/studio-images/saree-green-floral-indoor.jpeg",
-    skin: "/studio-images/bridal-makeup-artist-working.jpeg",
-    bridal: "/studio-images/kerala-bride-kanjeevaram-silk.jpeg",
+    hair: "/services/hairdesign-colour-and-treatments.png",
+    skin: "/services/facials-and-bleach-treatment.png",
+    bridal: "/services/bridal-special-package-makeup-hair-styling-and-saree-draping.png",
     mehendiTattoo: "/studio-images/bride-pink-lehenga-outdoor.jpeg",
     mensGrooming: "/studio-images/groom-portrait-white-mundu.jpeg",
     groomPackageCover: "/studio-images/groom-white-kurta-indoor.jpeg",
@@ -147,20 +147,20 @@ export const siteImages = {
   // Why Alenora Sticky Cards
   whyUs: [
     {
-      url: "/studio-images/bridal-makeup-artist-working.jpeg",
-      alt: "Alenora certified cosmetologist applying professional bridal makeup",
+      url: "/philosophy/certified-cosmetologists.png",
+      alt: "Certified cosmetologists at Alenora Beauty Studio, Kozhikode",
     },
     {
-      url: "/studio-images/kerala-bride-kanjeevaram-silk.jpeg",
-      alt: "Personalised one-on-one bridal consultation and makeover at Alenora",
+      url: "/philosophy/a-personal-consultation-first.png",
+      alt: "Personal consultation and client vision discussion at Alenora",
     },
     {
-      url: "/studio-images/kids-yellow-outdoor-vibrant.jpeg",
-      alt: "Welcoming family studio — women, men, and kids styling in Kozhikode",
+      url: "/philosophy/One-Studio-for-the-Whole-Family.png",
+      alt: "One studio for the whole family — women, men, and kids styling in Kozhikode",
     },
     {
-      url: "/studio-images/bridal-white-silver-lehenga.jpeg",
-      alt: "Grand bridal and occasion makeover artistry — Alenora Beauty Studio",
+      url: "/philosophy/Bridal-and-occation-specialists.png",
+      alt: "Bridal and occasion specialists at Alenora Beauty Studio",
     },
   ],
 

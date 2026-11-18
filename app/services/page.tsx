@@ -30,7 +30,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Main Service Menu Accordion */}
-      <ServiceMenuSection />
+      <ServiceMenuSection showPrices={true} />
 
       {/* Seasonal Offers Band */}
       <OffersSection />

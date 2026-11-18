@@ -34,19 +34,18 @@ export const studioOffers: StudioOffer[] = [
   {
     id: "saree-draping-service",
     badge: "Official Rate Card",
-    title: "Master Saree Draping & Box Folding",
-    tagline: "Pin-perfect pleats and pre-event steam box folding",
-    offerPrice: 1000,
-    priceNote: "Starting from ₹1,000",
+    title: "Master Saree Draping",
+    tagline: "Pin-perfect pleats and elegant occasion drape styles",
+    offerPrice: 800,
+    priceNote: "Starting from ₹800",
     highlights: [
-      "Saree Draping (Without Pleats): ₹1,000",
-      "Saree Draping (With Pleats): ₹1,500",
-      "Saree Box Folding & Steam Press: ₹1,000",
+      "Saree Draping (Without Pleats): ₹800",
+      "Saree Draping (With Pleats): ₹1,250",
       "Secure anchoring for Kanjeevaram & Kasavu silks",
       "Comfort guaranteed for all-day ceremony wear",
     ],
     whatsAppMessage:
-      "Hi Alenora, I'd like to book saree draping / box folding services. Please share available time slots.",
+      "Hi Alenora, I'd like to book saree draping services. Please share available time slots.",
     expiresText: "Available in-studio at East Hill, Kozhikode",
   },
 ];

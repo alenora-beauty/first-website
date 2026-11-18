@@ -10,7 +10,11 @@ import Button from "@/components/ui/Button";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Clock, Sparkles, CheckCircle2, ShieldCheck, MessageCircle } from "lucide-react";
 
-export default function ServiceMenuSection() {
+interface ServiceMenuSectionProps {
+  showPrices?: boolean;
+}
+
+export default function ServiceMenuSection({ showPrices = true }: ServiceMenuSectionProps) {
   const [activeCategoryId, setActiveCategoryId] = useState<string>("hair");
 
   const toggleCategory = (id: string) => {
@@ -24,16 +28,22 @@ export default function ServiceMenuSection() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <SectionHeader
             index="03"
-            eyebrow="Official Price Menu"
-            title="Every service from our brochure."
-            description="Verified rate card pricing for hair styling, colour, treatments, clinical facials, saree draping, and bridal packages."
+            eyebrow={showPrices ? "Official Price Menu" : "Bespoke Studio Services"}
+            title={showPrices ? "Every service from our brochure." : "Every service crafted with intention."}
+            description={
+              showPrices
+                ? "Verified rate card pricing for hair styling, colour, treatments, clinical facials, saree draping, and bridal packages."
+                : "Explore precision hair styling, bespoke colour, clinical facials, saree draping, and customized bridal couture in Kozhikode."
+            }
           />
           <div className="shrink-0 text-xs text-muted max-w-xs font-sans p-3 rounded-xl bg-ivory border border-hairline shadow-soft">
             <div className="flex items-center gap-1.5 font-semibold text-espresso mb-1">
               <ShieldCheck className="w-4 h-4 text-gold" />
-              <span>Official Studio Rate Card</span>
+              <span>{showPrices ? "Official Studio Rate Card" : "Personalized Consultations"}</span>
             </div>
-            All prices match our published brochure. Book or consult directly on WhatsApp.
+            {showPrices
+              ? "All prices match our published brochure. Book or consult directly on WhatsApp."
+              : "Every service begins with a personalized consultation. Book or consult directly on WhatsApp."}
           </div>
         </div>
 
@@ -81,7 +91,7 @@ export default function ServiceMenuSection() {
                         {category.title}
                       </h3>
                       <span className="text-xs text-muted font-sans sm:hidden block mt-0.5">
-                        {category.items.length} items in brochure
+                        {category.items.length} {showPrices ? "items in brochure" : "curated services"}
                       </span>
                     </div>
                   </div>
@@ -131,7 +141,7 @@ export default function ServiceMenuSection() {
                             <div className="absolute inset-0 bg-gradient-to-t from-espresso/60 to-transparent" />
                             <div className="absolute bottom-4 left-4 right-4 text-ivory">
                               <span className="text-[11px] uppercase tracking-widest text-gold font-semibold">
-                                Brochure Section
+                                {showPrices ? "Brochure Section" : "Signature Offerings"}
                               </span>
                               <p className="text-sm font-medium font-serif mt-0.5">
                                 {category.title}
@@ -160,7 +170,7 @@ export default function ServiceMenuSection() {
                               <div className="md:col-span-8 space-y-3">
                                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold/20 text-gold text-xs font-semibold uppercase tracking-wider border border-gold/40">
                                   <Sparkles className="w-3.5 h-3.5" />
-                                  <span>Featured Brochure Package</span>
+                                  <span>{showPrices ? "Featured Brochure Package" : "Signature Studio Package"}</span>
                                 </div>
                                 <h4 className="font-serif text-2xl sm:text-3xl text-ivory font-normal">
                                   {category.featuredPackage.title}
@@ -180,25 +190,46 @@ export default function ServiceMenuSection() {
                               </div>
 
                               <div className="md:col-span-4 flex flex-col items-start md:items-end justify-center pt-4 md:pt-0 border-t md:border-t-0 md:border-l border-ivory/15 md:pl-6 space-y-3">
-                                <div>
-                                  <span className="font-serif text-3xl sm:text-4xl text-gold font-normal">
-                                    {formatPrice(category.featuredPackage.offerPrice)}
-                                  </span>
-                                </div>
-                                <span className="text-[10px] text-ivory/60 tracking-wider uppercase font-mono">
-                                  {category.featuredPackage.priceStatus}
-                                </span>
-                                <Button
-                                  href={buildWhatsAppLink(
-                                    `Hi Alenora, I want to book the ${category.featuredPackage.title} (₹${category.featuredPackage.offerPrice}). Please let me know your available slots.`
-                                  )}
-                                  external
-                                  variant="gold"
-                                  size="md"
-                                  className="w-full text-center"
-                                >
-                                  Book This Package
-                                </Button>
+                                {showPrices ? (
+                                  <>
+                                    <div>
+                                      <span className="font-serif text-3xl sm:text-4xl text-gold font-normal">
+                                        {formatPrice(category.featuredPackage.offerPrice)}
+                                      </span>
+                                    </div>
+                                    <span className="text-[10px] text-ivory/60 tracking-wider uppercase font-mono">
+                                      {category.featuredPackage.priceStatus}
+                                    </span>
+                                    <Button
+                                      href={buildWhatsAppLink(
+                                        `Hi Alenora, I want to book the ${category.featuredPackage.title} (₹${category.featuredPackage.offerPrice}). Please let me know your available slots.`
+                                      )}
+                                      external
+                                      variant="gold"
+                                      size="md"
+                                      className="w-full text-center"
+                                    >
+                                      Book This Package
+                                    </Button>
+                                  </>
+                                ) : (
+                                  <>
+                                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold/15 text-gold text-xs font-mono uppercase tracking-wider border border-gold/30">
+                                      Personalized Consultation
+                                    </div>
+                                    <Button
+                                      href={buildWhatsAppLink(
+                                        `Hi Alenora, I would like to book the ${category.featuredPackage.title}. Please let me know your available slots.`
+                                      )}
+                                      external
+                                      variant="gold"
+                                      size="md"
+                                      className="w-full text-center"
+                                    >
+                                      Book on WhatsApp
+                                    </Button>
+                                  </>
+                                )}
                               </div>
                             </div>
                           </div>
@@ -249,24 +280,26 @@ export default function ServiceMenuSection() {
                                               {item.name}
                                             </h5>
                                           </div>
-                                          <div className="sm:text-right shrink-0">
-                                            {hasPrice ? (
-                                              <>
-                                                <span className="font-serif text-2xl sm:text-3xl text-gold font-normal tracking-tight">
-                                                  {formattedPrice}
-                                                </span>
-                                                {item.priceNote && (
-                                                  <span className="block text-[11px] text-gold/80 font-mono tracking-wider uppercase mt-0.5">
-                                                    {item.priceNote}
+                                          {showPrices && (
+                                            <div className="sm:text-right shrink-0">
+                                              {hasPrice ? (
+                                                <>
+                                                  <span className="font-serif text-2xl sm:text-3xl text-gold font-normal tracking-tight">
+                                                    {formattedPrice}
                                                   </span>
-                                                )}
-                                              </>
-                                            ) : (
-                                              <span className="inline-block text-xs uppercase font-mono tracking-wider text-gold bg-gold/15 px-2.5 py-1 rounded-full border border-gold/30">
-                                                Price on Consultation
-                                              </span>
-                                            )}
-                                          </div>
+                                                  {item.priceNote && (
+                                                    <span className="block text-[11px] text-gold/80 font-mono tracking-wider uppercase mt-0.5">
+                                                      {item.priceNote}
+                                                    </span>
+                                                  )}
+                                                </>
+                                              ) : (
+                                                <span className="inline-block text-xs uppercase font-mono tracking-wider text-gold bg-gold/15 px-2.5 py-1 rounded-full border border-gold/30">
+                                                  Price on Consultation
+                                                </span>
+                                              )}
+                                            </div>
+                                          )}
                                         </div>
                                         <p className="text-sm text-ivory/80 leading-relaxed font-sans">
                                           {item.description}
@@ -286,12 +319,16 @@ export default function ServiceMenuSection() {
                                         )}
                                         <Button
                                           href={
-                                            hasPrice
-                                              ? buildWhatsAppLink(
-                                                  `Hi Alenora, I would like to book "${item.name}" (${formattedPrice}${item.priceNote ? ` ${item.priceNote}` : ""}). Please let me know your available slots.`
-                                                )
+                                            showPrices
+                                              ? hasPrice
+                                                ? buildWhatsAppLink(
+                                                    `Hi Alenora, I would like to book "${item.name}" (${formattedPrice}${item.priceNote ? ` ${item.priceNote}` : ""}). Please let me know your available slots.`
+                                                  )
+                                                : buildWhatsAppLink(
+                                                    `Hi Alenora, I would like to enquire about "${item.name}". Please share details and pricing.`
+                                                  )
                                               : buildWhatsAppLink(
-                                                  `Hi Alenora, I would like to enquire about "${item.name}". Please share details and pricing.`
+                                                  `Hi Alenora, I would like to book "${item.name}". Please let me know your available slots.`
                                                 )
                                           }
                                           external
@@ -299,7 +336,7 @@ export default function ServiceMenuSection() {
                                           size="sm"
                                           className="w-full sm:w-auto text-center font-semibold"
                                         >
-                                          {hasPrice ? "Book This Service" : "Enquire on WhatsApp"}
+                                          {showPrices ? (hasPrice ? "Book This Service" : "Enquire on WhatsApp") : "Book on WhatsApp"}
                                         </Button>
                                       </div>
                                     </div>

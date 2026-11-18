@@ -20,7 +20,7 @@ export default function HomePage() {
       <StudioSection />
 
       {/* 03. Service Menu */}
-      <ServiceMenuSection />
+      <ServiceMenuSection showPrices={false} />
 
       {/* 04. Why Alenora */}
       <WhyUsSection />

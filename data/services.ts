@@ -38,80 +38,46 @@ export const servicesData: ServiceCategory[] = [
     id: "hair",
     number: "01",
     title: "Hair Design, Colour & Treatments",
-    tags: ["Root Touch-Up", "Global Colour", "Balayage", "Smoothening", "Botox", "Hair Spa"],
+    tags: ["Root Touch-Up", "Highlights", "Global Ombre & Balayage", "Smoothening", "Keratin", "Botox", "Hair Spa", "Oil Massage"],
     description:
-      "Full hair styling, colouring, and clinical treatments from our brochure: precision root touch-ups (Normal, L'Oreal, Matrix, Schwarzkopf), global colour, hand-painted balayage, keratin, hair botox, and rejuvenating hair spas.",
+      "All official hair colouring, treatments, spas, and oil massages strictly from our brochure: Full Head Root Touch-Up (Normal, L'Oreal, Schwarzkopf, Matrix), Highlights per streak, Global Ombre & Balayage, advanced treatments (Smoothening, Permanent Blowdry, Keratin, Botox), Hair Spas, and nourishing Oil Massages.",
     image: siteImages.services.hair,
     items: [
-      // Hair Styling & Setting (From Brochure Page 1)
-      {
-        id: "hair-blowdry",
-        name: "Hair Blowdry",
-        description: "Professional wash, blow-dry styling, and lasting shape.",
-        priceFrom: 800,
-        duration: "30–45 mins",
-        group: "Hair Styling and Setting",
-      },
-      {
-        id: "hair-straightening",
-        name: "Hair Straightening",
-        description: "Thermal precision straightening leaving hair sleek, smooth, and manageable.",
-        priceFrom: 1000,
-        duration: "45–60 mins",
-        group: "Hair Styling and Setting",
-      },
-      {
-        id: "hair-crimping",
-        name: "Hair Crimping",
-        description: "Textured crimp styling providing volume and structure for special occasions.",
-        priceFrom: 1000,
-        duration: "45–60 mins",
-        group: "Hair Styling and Setting",
-      },
-      {
-        id: "hair-curling",
-        name: "Hair Curling",
-        description: "Long-lasting bouncy curls and Hollywood waves customized to your preference.",
-        priceFrom: 1200,
-        duration: "45–60 mins",
-        group: "Hair Styling and Setting",
-      },
-
-      // Full Head Root Touch Up (From Brochure Page 2 + Chat Overrides)
+      // HAIR COLOURING - FULL HEAD ROOT TOUCH UP
       {
         id: "root-touchup-normal",
         name: "Full Head Root Touch Up (Normal)",
         description: "Complete grey coverage and root refresh with standard salon formulation.",
-        priceFrom: 800,
+        priceFrom: 1000,
         duration: "45–60 mins",
-        group: "Hair Colouring - Root Touch Up",
+        group: "Hair Colouring - Full Head Root Touch Up",
       },
       {
         id: "root-touchup-loreal",
         name: "Full Head Root Touch Up (L'Oreal)",
         description: "L'Oreal professional ammonia-safe colour delivering rich depth and shine.",
-        priceFrom: 1000,
+        priceFrom: 2000,
         duration: "45–60 mins",
-        group: "Hair Colouring - Root Touch Up",
-      },
-      {
-        id: "root-touchup-matrix",
-        name: "Full Head Root Touch Up (Matrix)",
-        description: "Matrix enriched colour technology ensuring 100% grey coverage and lasting tone.",
-        priceFrom: 1000,
-        duration: "45–60 mins",
-        group: "Hair Colouring - Root Touch Up",
+        group: "Hair Colouring - Full Head Root Touch Up",
       },
       {
         id: "root-touchup-schwarzkopf",
         name: "Full Head Root Touch Up (Schwarzkopf)",
         description: "Premium Schwarzkopf high-definition pigment formulation for intense, durable colour.",
-        priceFrom: 1500,
+        priceFrom: 2500,
         duration: "45–60 mins",
-        group: "Hair Colouring - Root Touch Up",
+        group: "Hair Colouring - Full Head Root Touch Up",
+      },
+      {
+        id: "root-touchup-matrix",
+        name: "Full Head Root Touch Up (Matrix)",
+        description: "Matrix enriched colour technology ensuring 100% grey coverage and lasting tone.",
+        priceFrom: 2000,
+        duration: "45–60 mins",
+        group: "Hair Colouring - Full Head Root Touch Up",
       },
 
-      // Highlights & Global (From Brochure Page 2 + Chat Overrides)
+      // HIGHLIGHTS
       {
         id: "hair-highlights-streaks",
         name: "Highlights (Per Streaks)",
@@ -119,37 +85,30 @@ export const servicesData: ServiceCategory[] = [
         priceFrom: 350,
         priceNote: "per streak",
         duration: "20–30 mins",
-        group: "Highlights & Global",
+        group: "Highlights",
       },
-      {
-        id: "hair-global-colour",
-        name: "Global Colouring",
-        description: "Full-head seamless global colour formulated to complement your skin tone.",
-        priceFrom: 3000,
-        priceNote: "onwards",
-        duration: "90–120 mins",
-        featured: true,
-        group: "Highlights & Global",
-      },
+
+      // GLOBAL
       {
         id: "hair-ombre",
-        name: "Ombre",
+        name: "Global - Ombre",
         description: "Seamless gradual gradient transition from deeper roots to sun-kissed ends.",
         priceFrom: 3500,
         duration: "120–150 mins",
-        group: "Highlights & Global",
+        featured: true,
+        group: "Global",
       },
       {
         id: "hair-balayage",
-        name: "Balayage",
+        name: "Global - Balayage",
         description: "Freehand dimensional balayage blend for natural sunlit depth and movement.",
         priceFrom: 4000,
         duration: "150–180 mins",
         featured: true,
-        group: "Highlights & Global",
+        group: "Global",
       },
 
-      // Hair Treatments (From Brochure Page 2)
+      // HAIR TREATMENTS
       {
         id: "treatment-smoothening",
         name: "Smoothening",
@@ -177,7 +136,7 @@ export const servicesData: ServiceCategory[] = [
       },
       {
         id: "treatment-botox",
-        name: "Botox Treatment",
+        name: "Hair Botox",
         description: "Deep fiber reconstruction and anti-aging repair restoring elasticity, density, and gloss.",
         priceFrom: 8599,
         duration: "180–240 mins",
@@ -185,7 +144,7 @@ export const servicesData: ServiceCategory[] = [
         group: "Hair Treatments",
       },
 
-      // Hair Spa (From Brochure Page 2)
+      // HAIR SPA
       {
         id: "spa-matrix",
         name: "Matrix Hair Spa",
@@ -218,11 +177,12 @@ export const servicesData: ServiceCategory[] = [
         name: "Treated Hair Spa",
         description: "Specialized restorative care for highlighted, bleached, or heat-stressed hair fibers.",
         priceFrom: 2800,
+        priceNote: "onwards",
         duration: "75 mins",
         group: "Hair Spa",
       },
 
-      // Oil Massage (From Brochure Page 2)
+      // OIL MASSAGE
       {
         id: "oil-coconut",
         name: "Coconut Oil Massage",
@@ -253,28 +213,12 @@ export const servicesData: ServiceCategory[] = [
     id: "skin",
     number: "02",
     title: "Facials & Bleach Treatments",
-    tags: ["Aroma Magic", "VLCC", "Vedic Line", "Cheryl's", "Bleach"],
+    tags: ["Oxy Bleach", "Gold Bleach", "Normal Facial", "Aroma Magic", "VLCC", "Vedic Line"],
     description:
-      "All facial rituals and skin treatments strictly from the Alenora brochure: Normal Facial, Aroma Magic, VLCC, Vedic Line, Cheryl's Cosmeceuticals, and full neck and leg bleach.",
+      "All facial rituals and bleach treatments strictly from our official brochure: Full Neck & Legs Bleach (Oxy, Gold), Normal Facial, Aroma Magic, VLCC, and Vedic Line botanical skin therapies.",
     image: siteImages.services.skin,
     items: [
-      // Bleach (From Brochure Page 3)
-      {
-        id: "bleach-neck-oxy",
-        name: "Full Neck Oxy Bleach",
-        description: "Gentle oxygen bleach lightening fine hair and blending neck tone with face tone.",
-        priceFrom: 400,
-        duration: "20 mins",
-        group: "Bleach",
-      },
-      {
-        id: "bleach-neck-gold",
-        name: "Full Neck Gold Bleach",
-        description: "Golden shimmer bleach formulation giving the neck a radiant, soft finish.",
-        priceFrom: 500,
-        duration: "25 mins",
-        group: "Bleach",
-      },
+      // BLEACH - LEGS & FULL NECK
       {
         id: "bleach-legs-oxy",
         name: "Legs Oxy Bleach",
@@ -291,81 +235,81 @@ export const servicesData: ServiceCategory[] = [
         duration: "45 mins",
         group: "Bleach",
       },
+      {
+        id: "bleach-neck-oxy",
+        name: "Full Neck Oxy Bleach",
+        description: "Gentle oxygen bleach lightening fine hair and blending neck tone with face tone.",
+        priceFrom: 400,
+        duration: "20 mins",
+        group: "Bleach",
+      },
+      {
+        id: "bleach-neck-gold",
+        name: "Full Neck Gold Bleach",
+        description: "Golden shimmer bleach formulation giving the neck a radiant, soft finish.",
+        priceFrom: 500,
+        duration: "25 mins",
+        group: "Bleach",
+      },
 
-      // Facials - Normal (From Brochure Page 3)
+      // FACIALS - NORMAL
       {
         id: "facial-normal",
         name: "Normal Facial",
         description: "Essential cleansing facial with gentle steam, exfoliation, massage, and pack.",
         priceFrom: 1000,
         duration: "45 mins",
-        group: "Facials (Classic)",
+        group: "Facials",
       },
 
-      // Aroma Magic (From Brochure Page 3 + Chat Overrides)
+      // AROMA MAGIC
       {
         id: "aroma-bridal-glow",
-        name: "Aroma Magic Bridal Glow",
+        name: "Aroma Magic - Bridal Glow",
         description: "Signature aromatherapy bridal facial formulated for immediate radiance and event readiness.",
-        priceFrom: 3000,
+        priceFrom: 2500,
         duration: "60 mins",
         featured: true,
         group: "Aroma Magic",
       },
       {
         id: "aroma-vitamin-c",
-        name: "Aroma Magic Vitamin C",
+        name: "Aroma Magic - Vitamin C",
         description: "Antioxidant Vitamin C treatment reversing dullness and boosting skin luminosity.",
-        priceFrom: 3000,
+        priceFrom: 2000,
         duration: "60 mins",
         featured: true,
         group: "Aroma Magic",
       },
       {
         id: "aroma-skin-glow",
-        name: "Aroma Magic Skin Glow",
+        name: "Aroma Magic - Skin Glow",
         description: "Deep hydration essential oil therapy restoring natural moisture and healthy dewy glow.",
-        priceFrom: 3000,
+        priceFrom: 2000,
         duration: "60 mins",
         group: "Aroma Magic",
       },
       {
         id: "aroma-jewel",
-        name: "Aroma Magic Jewel Facial",
+        name: "Aroma Magic - Jewel Facial",
         description: "Luxury mineral jewel infusion smoothing skin surface and enhancing natural clarity.",
         priceFrom: 2500,
         duration: "60 mins",
         group: "Aroma Magic",
       },
 
-      // VLCC (From Brochure Page 3)
+      // VLCC
       {
         id: "vlcc-anti-tan",
-        name: "VLCC Anti Tan",
+        name: "VLCC - Anti Tan",
         description: "Targeted detan therapy designed to clear sun tanning and lighten dark spots.",
         priceFrom: 1500,
         duration: "60 mins",
         group: "VLCC",
       },
       {
-        id: "vlcc-silver",
-        name: "VLCC Silver",
-        description: "Purifying colloidal silver extracts cooling skin and detoxifying pores.",
-        priceFrom: 1500,
-        duration: "60 mins",
-        group: "VLCC",
-      },
-      {
-        id: "vlcc-diamond",
-        name: "VLCC Diamond",
-        description: "Micro-diamond particles polishing skin texture for a camera-ready shine.",
-        priceFrom: 1500,
-        duration: "60 mins",
-        group: "VLCC",
-      },
-      {
         id: "vlcc-anti-acne",
-        name: "VLCC Anti Acne",
+        name: "VLCC - Anti Acne",
         description: "Antibacterial care for oily or acne-prone skin, calming breakouts and redness.",
         priceFrom: 2000,
         duration: "60 mins",
@@ -373,100 +317,80 @@ export const servicesData: ServiceCategory[] = [
       },
       {
         id: "vlcc-hyper-pigmentation",
-        name: "VLCC Hyper Pigmentation",
+        name: "VLCC - Hyper Pigmentation",
         description: "Specialized formulation targeting stubborn hyperpigmentation and uneven skin tone.",
         priceFrom: 2000,
         duration: "60 mins",
         group: "VLCC",
       },
+      {
+        id: "vlcc-silver",
+        name: "VLCC - Silver",
+        description: "Purifying colloidal silver extracts cooling skin and detoxifying pores.",
+        priceFrom: 1500,
+        duration: "60 mins",
+        group: "VLCC",
+      },
+      {
+        id: "vlcc-diamond",
+        name: "VLCC - Diamond",
+        description: "Micro-diamond particles polishing skin texture for a camera-ready shine.",
+        priceFrom: 1500,
+        duration: "60 mins",
+        group: "VLCC",
+      },
 
-      // Vedic Line (From Brochure Page 3)
+      // VEDIC LINE
       {
         id: "vedic-pappaya",
-        name: "Vedic Line Pappaya Facial",
+        name: "Vedic Line - Pappaya Facial",
         description: "Natural fruit papain enzyme exfoliation dissolving dead cells and revealing clean skin.",
         priceFrom: 1500,
         duration: "60 mins",
         group: "Vedic Line",
       },
       {
-        id: "vedic-pearl",
-        name: "Vedic Line Pearl",
-        description: "Crushed pearl extracts hydrating and refining skin texture with soft sheen.",
-        priceFrom: 2000,
-        duration: "60 mins",
-        group: "Vedic Line",
-      },
-      {
-        id: "vedic-silver",
-        name: "Vedic Line Silver",
-        description: "Herbal silver complex calming sun-exposed skin and locking in moisture.",
-        priceFrom: 2300,
-        duration: "60 mins",
-        group: "Vedic Line",
-      },
-      {
         id: "vedic-green-tea",
-        name: "Vedic Line Green Tea",
+        name: "Vedic Line - Green Tea",
         description: "Antioxidant-rich matcha green tea protecting skin against environmental damage.",
         priceFrom: 2500,
         duration: "60 mins",
         group: "Vedic Line",
       },
       {
+        id: "vedic-silver",
+        name: "Vedic Line - Silver",
+        description: "Herbal silver complex calming sun-exposed skin and locking in moisture.",
+        priceFrom: 2300,
+        duration: "60 mins",
+        group: "Vedic Line",
+      },
+      {
+        id: "vedic-pearl",
+        name: "Vedic Line - Pearl",
+        description: "Crushed pearl extracts hydrating and refining skin texture with soft sheen.",
+        priceFrom: 2000,
+        duration: "60 mins",
+        group: "Vedic Line",
+      },
+      {
         id: "vedic-gold",
-        name: "Vedic Line Gold",
+        name: "Vedic Line - Gold",
         description: "24-Karat gold leaf botanicals stimulating collagen and providing regal radiance.",
         priceFrom: 2500,
         duration: "60 mins",
         featured: true,
         group: "Vedic Line",
       },
-
-      // Cheryl's (From Brochure Page 3)
-      {
-        id: "cheryls-tan-clean",
-        name: "Cheryl's Tan Clean",
-        description: "Clinical-grade detan treatment rapidly clearing epidermal tan and dullness.",
-        priceFrom: 2500,
-        duration: "60 mins",
-        featured: true,
-        group: "Cheryl's",
-      },
-      {
-        id: "cheryls-vitalift",
-        name: "Cheryl's Vitalift",
-        description: "Firming anti-aging facial tightening contours and restoring elasticity.",
-        priceFrom: 2600,
-        duration: "75 mins",
-        group: "Cheryl's",
-      },
-      {
-        id: "cheryls-glovite",
-        name: "Cheryl's Glovite",
-        description: "Instant red-carpet radiance treatment accelerating cell renewal.",
-        priceFrom: 2800,
-        duration: "75 mins",
-        group: "Cheryl's",
-      },
-      {
-        id: "cheryls-oxyblast",
-        name: "Cheryl's Oxyblast",
-        description: "Pressurized pure oxygen infusion revitalizing deep skin layers for maximum glow.",
-        priceFrom: 3000,
-        duration: "75 mins",
-        featured: true,
-        group: "Cheryl's",
-      },
     ],
   },
   {
     id: "bridal",
     number: "03",
-    title: "Bridal Special Package, Make-Up & Saree Draping",
-    tags: ["Bridal Special Package", "HD Makeup", "Saree Draping", "Box Folding"],
+    title: "Bridal Special Package, Make-Up, Hair Styling & Saree Draping",
+    tags: ["Bridal Special Package", "HD Makeup", "Hair Styling", "Saree Draping"],
     description:
-      "All bridal and makeover services directly from the Alenora brochure: the comprehensive Bridal Special Package (₹9,300), HD bridal make-up styles, and professional saree draping and box folding.",
+      "All bridal, makeover, hair styling, and saree draping services directly from our official brochure: the comprehensive Bridal Special Package (₹9,300), HD bridal makeup styles, event hair styling, and precision saree draping.",
     image: siteImages.services.bridal,
     featuredPackage: {
       title: "Bridal Special Package",
@@ -485,19 +409,7 @@ export const servicesData: ServiceCategory[] = [
       image: siteImages.services.bridal,
     },
     items: [
-      // Bridal Special Package (From Brochure Page 1)
-      {
-        id: "bridal-special-package",
-        name: "Bridal Special Package",
-        description:
-          "Facial with De-Tan Pack, Under Eye Treatment, Lip Care, Pedicure and Manicure, and Hair Spa.",
-        priceFrom: 9300,
-        duration: "210–240 mins",
-        featured: true,
-        group: "Bridal Special Package",
-      },
-
-      // Make - Up (From Brochure Page 1 - No prices printed, Price on Consultation)
+      // MAKE - UP
       {
         id: "makeup-hindu-hd",
         name: "Hindu HD Bridal Makeup",
@@ -529,21 +441,21 @@ export const servicesData: ServiceCategory[] = [
         group: "Make - Up",
       },
       {
-        id: "makeup-engagement",
-        name: "Engagement Makeup",
-        description: "Sophisticated modern glam calibrated for evening stage lighting and photography.",
-        priceFrom: 0,
-        priceNote: "Price on Consultation",
-        duration: "90–120 mins",
-        group: "Make - Up",
-      },
-      {
         id: "makeup-party",
         name: "Party Makeup",
         description: "Flawless party finish for bridesmaids, sisters, reception guests, and family members.",
         priceFrom: 0,
         priceNote: "Price on Consultation",
         duration: "60–75 mins",
+        group: "Make - Up",
+      },
+      {
+        id: "makeup-engagement",
+        name: "Engagement Makeup",
+        description: "Sophisticated modern glam calibrated for evening stage lighting and photography.",
+        priceFrom: 0,
+        priceNote: "Price on Consultation",
+        duration: "90–120 mins",
         group: "Make - Up",
       },
       {
@@ -565,31 +477,57 @@ export const servicesData: ServiceCategory[] = [
         group: "Make - Up",
       },
 
-      // Saree Draping & Box Folding (From Brochure Page 1 + Chat Overrides)
+      // HAIR STYLING AND SETTING
+      {
+        id: "hair-curling",
+        name: "Hair Curling",
+        description: "Long-lasting bouncy curls and Hollywood waves customized to your preference.",
+        priceFrom: 1200,
+        duration: "45–60 mins",
+        group: "Hair Styling and Setting",
+      },
+      {
+        id: "hair-straightening",
+        name: "Hair Straightening",
+        description: "Thermal precision straightening leaving hair sleek, smooth, and manageable.",
+        priceFrom: 1000,
+        duration: "45–60 mins",
+        group: "Hair Styling and Setting",
+      },
+      {
+        id: "hair-crimping",
+        name: "Hair Crimping",
+        description: "Textured crimp styling providing volume and structure for special occasions.",
+        priceFrom: 1000,
+        duration: "45–60 mins",
+        group: "Hair Styling and Setting",
+      },
+      {
+        id: "hair-blowdry",
+        name: "Hair Blowdry",
+        description: "Professional wash, blow-dry styling, and lasting shape.",
+        priceFrom: 800,
+        duration: "30–45 mins",
+        group: "Hair Styling and Setting",
+      },
+
+      // SAREE DRAPING
       {
         id: "saree-without-pleat",
         name: "Saree Draping (Without Pleats)",
         description: "Graceful open-pallu drape for modern silks, chiffons, georgettes, and party sarees.",
-        priceFrom: 1000,
+        priceFrom: 800,
         duration: "30 mins",
-        group: "Saree Draping & Setting",
+        group: "Saree Draping",
       },
       {
         id: "saree-with-pleats",
         name: "Saree Draping (With Pleats)",
         description: "Precision surgical box-pleating anchored securely for Kanjeevaram and Kasavu silks.",
-        priceFrom: 1500,
+        priceFrom: 1250,
         duration: "45 mins",
         featured: true,
-        group: "Saree Draping & Setting",
-      },
-      {
-        id: "saree-box-folding",
-        name: "Saree Box Folding",
-        description: "Professional pre-event box folding and steam pressing to keep sarees crisp and ready to drape.",
-        priceFrom: 1000,
-        duration: "30 mins",
-        group: "Saree Draping & Setting",
+        group: "Saree Draping",
       },
     ],
   },

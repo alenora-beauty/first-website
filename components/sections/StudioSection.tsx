@@ -131,10 +131,6 @@ export default function StudioSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-espresso/90 via-espresso/30 to-transparent" />
 
-              <div className="absolute top-4 left-4 font-mono text-xs text-gold bg-espresso/60 backdrop-blur-md px-3 py-1 rounded-full border border-gold/30">
-                {card.number}
-              </div>
-
               <div className="absolute bottom-0 inset-x-0 p-6 text-ivory">
                 <h3 className="font-serif text-2xl font-normal tracking-tight text-ivory group-hover:text-gold transition-colors">
                   {card.data.title}
