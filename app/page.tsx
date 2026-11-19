@@ -4,7 +4,6 @@ import ServiceMenuSection from "@/components/sections/ServiceMenuSection";
 import WhyUsSection from "@/components/sections/WhyUsSection";
 import TransformationsSection from "@/components/sections/TransformationsSection";
 import TeamSection from "@/components/sections/TeamSection";
-import VisitSection from "@/components/sections/VisitSection";
 import ReviewsSection from "@/components/sections/ReviewsSection";
 import GallerySection from "@/components/sections/GallerySection";
 import FaqSection from "@/components/sections/FaqSection";
@@ -31,20 +30,17 @@ export default function HomePage() {
       {/* 06. Team */}
       <TeamSection />
 
-      {/* 07. Your Visit */}
-      <VisitSection />
-
-      {/* 08. Reviews (Rendered ONLY if showReviews is true in site.ts) */}
+      {/* Reviews (Rendered ONLY if showReviews is true in site.ts) */}
       <ReviewsSection />
 
-      {/* 09. Gallery */}
+      {/* 07. Gallery */}
       <GallerySection />
 
-      {/* 10. FAQ */}
-      <FaqSection />
+      {/* 08. FAQ */}
+      <FaqSection index="08" />
 
-      {/* 11. Booking */}
-      <BookingSection />
+      {/* 09. Booking */}
+      <BookingSection index="09" />
     </>
   );
 }

@@ -20,7 +20,21 @@ export default function BeforeAfterSlider({
 }: BeforeAfterSliderProps) {
   const [sliderPosition, setSliderPosition] = useState<number>(50); // percentage 0 to 100
   const [isDragging, setIsDragging] = useState<boolean>(false);
+  const [containerWidth, setContainerWidth] = useState<number>(0);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+    const updateWidth = () => {
+      if (containerRef.current) {
+        setContainerWidth(containerRef.current.offsetWidth);
+      }
+    };
+    updateWidth();
+    const ro = new ResizeObserver(updateWidth);
+    ro.observe(containerRef.current);
+    return () => ro.disconnect();
+  }, []);
 
   const handleMove = useCallback((clientX: number) => {
     if (!containerRef.current) return;
@@ -98,8 +112,8 @@ export default function BeforeAfterSlider({
           className="object-cover"
           priority
         />
-        <div className="absolute top-4 right-4 bg-espresso/80 backdrop-blur-md text-ivory text-xs uppercase tracking-widest px-3 py-1.5 rounded-full font-medium pointer-events-none border border-ivory/20">
-          After
+        <div className="absolute top-4 right-4 bg-espresso/80 backdrop-blur-md text-ivory text-xs uppercase tracking-widest px-3.5 py-1.5 rounded-full font-semibold pointer-events-none border border-ivory/20 shadow-sm">
+          AFTER
         </div>
       </div>
 
@@ -112,9 +126,7 @@ export default function BeforeAfterSlider({
           <div
             className="absolute inset-0"
             style={{
-              width: containerRef.current
-                ? `${containerRef.current.offsetWidth}px`
-                : "100%",
+              width: containerWidth ? `${containerWidth}px` : "100%",
             }}
           >
             <Image
@@ -126,8 +138,8 @@ export default function BeforeAfterSlider({
               priority
             />
           </div>
-          <div className="absolute top-4 left-4 bg-coffee/80 backdrop-blur-md text-ivory text-xs uppercase tracking-widest px-3 py-1.5 rounded-full font-medium pointer-events-none border border-ivory/20">
-            Before
+          <div className="absolute top-4 left-4 bg-espresso/80 backdrop-blur-md text-ivory text-xs uppercase tracking-widest px-3.5 py-1.5 rounded-full font-semibold pointer-events-none border border-ivory/20 shadow-sm">
+            BEFORE
           </div>
         </div>
       </div>

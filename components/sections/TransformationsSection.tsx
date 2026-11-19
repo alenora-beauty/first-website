@@ -16,17 +16,19 @@ export default function TransformationsSection() {
     transformations.find((item) => item.id === activeCaseId) || transformations[0];
 
   return (
-    <section id="transformations" className="py-24 sm:py-32 bg-cream text-espresso">
+    <section id="transformations" className="py-14 sm:py-16 lg:py-20 bg-cream text-espresso">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeader
-          index="05"
-          eyebrow="Side-by-Side Results"
-          title="Real results, side by side."
-          description="Drag the slider to inspect before and after client transformations. Photos shown are placeholders marked to be replaced with real studio cases."
-        />
+        <div className="mb-6 sm:mb-8">
+          <SectionHeader
+            index="05"
+            eyebrow="Side-by-Side Results"
+            title="Real results, side by side."
+            description="Drag the slider to inspect real before-and-after client hair transformations crafted at Alenora Beauty Studio."
+          />
+        </div>
 
         {/* Clickable Case Study Selector Tabs */}
-        <div className="mt-12 flex flex-wrap gap-3 pb-2 border-b border-hairline">
+        <div className="flex flex-wrap items-center gap-3 pb-2 border-b border-hairline">
           {transformations.map((item) => {
             const isActive = item.id === activeCaseId;
             return (
@@ -74,41 +76,29 @@ export default function TransformationsSection() {
               <h3 className="font-serif text-2xl sm:text-3xl font-medium text-espresso mt-1">
                 {activeCase.title}
               </h3>
+              <p className="text-sm sm:text-base text-muted font-sans leading-relaxed mt-3">
+                {activeCase.description}
+              </p>
             </div>
 
-            <p className="text-sm sm:text-base text-muted font-sans leading-relaxed">
-              {activeCase.description}
-            </p>
-
             <div className="space-y-3 pt-2 border-t border-hairline text-sm">
-              <div className="flex items-center justify-between py-1">
-                <span className="text-muted flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-terracotta" />
-                  Service
+              <div className="flex items-center justify-between">
+                <span className="flex items-center text-muted gap-2">
+                  <CheckCircle className="w-4 h-4 text-terracotta" /> Service
                 </span>
-                <span className="font-medium text-espresso font-sans">
-                  {activeCase.service}
-                </span>
+                <span className="font-medium text-espresso">{activeCase.service}</span>
               </div>
-
-              <div className="flex items-center justify-between py-1">
-                <span className="text-muted flex items-center gap-2">
-                  <Clock className="w-4 h-4 text-terracotta" />
-                  Session Duration
+              <div className="flex items-center justify-between">
+                <span className="flex items-center text-muted gap-2">
+                  <Clock className="w-4 h-4 text-terracotta" /> Session Duration
                 </span>
-                <span className="font-medium text-espresso font-sans">
-                  {activeCase.time}
-                </span>
+                <span className="font-medium text-espresso">{activeCase.time}</span>
               </div>
-
-              <div className="flex items-center justify-between py-1">
-                <span className="text-muted flex items-center gap-2">
-                  <UserCheck className="w-4 h-4 text-terracotta" />
-                  Stylist Level
+              <div className="flex items-center justify-between">
+                <span className="flex items-center text-muted gap-2">
+                  <UserCheck className="w-4 h-4 text-terracotta" /> Stylist Level
                 </span>
-                <span className="font-medium text-espresso font-sans">
-                  {activeCase.technician}
-                </span>
+                <span className="font-medium text-espresso">{activeCase.technician}</span>
               </div>
             </div>
 

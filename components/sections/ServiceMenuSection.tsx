@@ -15,10 +15,13 @@ interface ServiceMenuSectionProps {
 }
 
 export default function ServiceMenuSection({ showPrices = true }: ServiceMenuSectionProps) {
-  const [activeCategoryId, setActiveCategoryId] = useState<string>("hair");
+  // Track open categories independently so sections open continuously one after another
+  const [openCategories, setOpenCategories] = useState<string[]>([]);
 
   const toggleCategory = (id: string) => {
-    setActiveCategoryId((prev) => (prev === id ? "" : id));
+    setOpenCategories((prev) =>
+      prev.includes(id) ? prev.filter((catId) => catId !== id) : [...prev, id]
+    );
   };
 
   return (
@@ -48,9 +51,9 @@ export default function ServiceMenuSection({ showPrices = true }: ServiceMenuSec
         </div>
 
         {/* 3-Category Accordion (Hair, Skin, Bridal) */}
-        <div className="space-y-4">
+        <div className="space-y-4" style={{ overflowAnchor: "none" }}>
           {servicesData.map((category: ServiceCategory) => {
-            const isOpen = activeCategoryId === category.id;
+            const isOpen = openCategories.includes(category.id);
 
             // Group items by subcategory group
             const groupedItems = category.items.reduce<Record<string, ServiceItem[]>>(
@@ -68,7 +71,8 @@ export default function ServiceMenuSection({ showPrices = true }: ServiceMenuSec
             return (
               <div
                 key={category.id}
-                className={`rounded-salon border transition-all duration-300 overflow-hidden ${
+                id={`service-card-${category.id}`}
+                className={`scroll-mt-24 rounded-salon border transition-all duration-300 overflow-hidden ${
                   isOpen
                     ? "bg-ivory border-coffee/30 shadow-elevated"
                     : "bg-ivory/60 border-hairline hover:border-coffee/20 hover:bg-ivory"
@@ -77,6 +81,7 @@ export default function ServiceMenuSection({ showPrices = true }: ServiceMenuSec
                 {/* Accordion Row Header */}
                 <button
                   type="button"
+                  id={`service-header-${category.id}`}
                   onClick={() => toggleCategory(category.id)}
                   aria-expanded={isOpen}
                   aria-controls={`service-content-${category.id}`}
@@ -124,7 +129,7 @@ export default function ServiceMenuSection({ showPrices = true }: ServiceMenuSec
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
+                      transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
                       className="overflow-hidden"
                     >
                       <div className="border-t border-hairline p-6 sm:p-8 lg:p-10 bg-ivory">
