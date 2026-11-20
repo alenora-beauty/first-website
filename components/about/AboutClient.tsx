@@ -57,11 +57,11 @@ export default function AboutClient() {
   ];
 
   return (
-    <div className="pt-20 sm:pt-24 pb-20 bg-cream text-espresso overflow-hidden">
+    <div className="pb-20 bg-cream text-espresso overflow-hidden">
       {/* ──────────────────────────────────────────────────────────
           1. GRAND CINEMATIC HERO SECTION: About Us
       ────────────────────────────────────────────────────────── */}
-      <section className="relative min-h-[560px] sm:min-h-[640px] lg:min-h-[720px] flex items-center justify-center text-center py-24 sm:py-32 lg:py-36 bg-[#140c08] text-ivory overflow-hidden border-b border-gold/25">
+      <section className="relative min-h-[580px] sm:min-h-[660px] lg:min-h-[740px] flex items-center justify-center text-center pt-32 sm:pt-40 lg:pt-44 pb-20 sm:pb-28 lg:pb-32 bg-cream text-espresso overflow-hidden border-b border-hairline">
         {/* Bespoke Luxury Beauty Atelier Backdrop */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <Image
@@ -69,11 +69,13 @@ export default function AboutClient() {
             alt="Alenora luxury beauty studio atelier ambience"
             fill
             sizes="100vw"
-            className="object-cover object-center scale-100"
+            unoptimized
+            className="object-cover object-center scale-100 brightness-[1.06] contrast-[1.03]"
             priority
           />
-          {/* Subtle Contrast Gradient to highlight the luxury vanity mirrors while keeping text ultra-legible */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#140c08]/70 via-[#140c08]/45 to-[#140c08]/90" />
+          {/* Luminous warm overlay allowing the atelier architecture to shine through vibrantly */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#140c08]/55 via-[#140c08]/20 to-[#140c08]/75 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#140c08]/40 via-transparent to-[#140c08]/40 pointer-events-none" />
         </div>
 
         {/* Floating Alenora Gold Flame Brandmark Watermark */}
@@ -156,10 +158,10 @@ export default function AboutClient() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2.5 px-4 sm:px-5 py-2 rounded-full bg-ivory/10 border border-gold/35 backdrop-blur-md shadow-soft mb-6"
+            className="inline-flex items-center gap-2.5 px-4 sm:px-5 py-2 rounded-full bg-cream/90 border border-coffee/20 backdrop-blur-md shadow-soft mb-6"
           >
-            <Crown className="w-4 h-4 text-gold shrink-0" />
-            <span className="text-[11px] sm:text-xs font-mono uppercase tracking-[0.25em] text-gold font-semibold">
+            <Crown className="w-4 h-4 text-terracotta shrink-0" />
+            <span className="text-[11px] sm:text-xs font-sans uppercase tracking-[0.25em] text-espresso font-bold">
               Alenora Beauty Studio • East Hill, Kozhikode
             </span>
           </motion.div>
@@ -169,9 +171,9 @@ export default function AboutClient() {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-serif text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-normal text-ivory tracking-tight uppercase leading-[0.95] drop-shadow-2xl"
+            className="font-serif text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-normal text-espresso tracking-tight uppercase leading-[0.95] drop-shadow-sm"
           >
-            About <span className="italic font-serif text-transparent bg-clip-text bg-gradient-to-r from-gold via-[#f8e7c9] to-gold">Us</span>
+            About <span className="italic font-serif text-espresso">Us</span>
           </motion.h1>
 
           {/* Subtitle / Core Vision Tagline */}
@@ -179,9 +181,9 @@ export default function AboutClient() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="mt-6 sm:mt-8 font-serif text-xl sm:text-2xl md:text-3xl text-ivory font-light max-w-3xl mx-auto leading-relaxed italic drop-shadow-md"
+            className="mt-6 sm:mt-8 font-serif text-xl sm:text-2xl md:text-3xl text-espresso font-medium max-w-3xl mx-auto leading-relaxed italic drop-shadow-sm"
           >
-            "Where Beauty Meets Confidence, and Dreams Become Reality."
+            &ldquo;Where Beauty Meets Confidence, and Dreams Become Reality.&rdquo;
           </motion.p>
 
           {/* Tagline Pill & Action Button */}
@@ -191,15 +193,15 @@ export default function AboutClient() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-3 sm:gap-4"
           >
-            <span className="px-5 py-2.5 rounded-full bg-gold/15 border border-gold/40 text-gold text-xs sm:text-sm font-sans font-medium tracking-wide shadow-[0_0_20px_rgba(201,162,75,0.25)] backdrop-blur-sm">
+            <span className="px-5 py-2.5 rounded-full bg-cream/90 border border-coffee/20 text-espresso text-xs sm:text-sm font-sans font-semibold tracking-wide shadow-soft backdrop-blur-md">
               Aspire Your Dream. Embrace Your Beauty.
             </span>
             <a
               href="#welcome-story"
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-ivory/15 hover:bg-ivory/25 text-ivory border border-ivory/35 text-xs sm:text-sm font-sans font-medium transition-all duration-300 backdrop-blur-md shadow-soft"
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-espresso text-ivory hover:bg-coffee border border-espresso text-xs sm:text-sm font-sans font-medium transition-all duration-300 shadow-soft"
             >
               <span>Explore Our Story</span>
-              <ChevronDown className="w-4 h-4 animate-bounce" />
+              <ChevronDown className="w-4 h-4 text-gold animate-bounce" />
             </a>
           </motion.div>
         </div>

@@ -23,7 +23,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Bridal Studio & Makeover Kozhikode | Kerala Muhurtham, Saree Draping & Mehendi | Alenora",
+  title: "Bridal Studio & Makeover Kozhikode | Wedding Ceremony Looks, Saree Draping & Mehendi | Alenora",
   description:
     "Dedicated luxury bridal studio at Alenora Beauty Studio, East Hill, Kozhikode. Specializing in 18-hour sweat-proof bridal makeovers, master silk saree draping, organic herbal mehendi, and complete bridal dressing assistance.",
 };
@@ -33,9 +33,9 @@ export default function BridalStudioPage() {
     "Hi Alenora Bridal Studio! I would like to inquire about bridal makeover services and check date availability for my wedding.";
 
   return (
-    <div className="pt-28 pb-20 bg-ivory text-espresso">
+    <div className="pb-20 bg-ivory text-espresso">
       {/* 1. Couture Editorial Bridal Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-cream via-cream to-ivory border-b border-hairline pt-6 sm:pt-12 pb-16 sm:pb-24">
+      <section className="relative overflow-hidden bg-gradient-to-b from-cream via-cream to-ivory border-b border-hairline pt-28 sm:pt-36 lg:pt-40 pb-16 sm:pb-24">
         {/* Subtle Luxury Pattern / Glow Backdrop */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/10 rounded-full blur-3xl pointer-events-none -mr-40 -mt-20" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-terracotta/5 rounded-full blur-3xl pointer-events-none -ml-20 -mb-20" />
@@ -122,7 +122,7 @@ export default function BridalStudioPage() {
               <div className="relative h-[480px] sm:h-[560px] lg:h-[600px] rounded-salon-lg overflow-hidden shadow-elevated border-2 border-gold/40 bg-espresso group">
                 <Image
                   src="/studio-images/kerala-bride-kanjeevaram-silk.jpeg"
-                  alt="Alenora Bridal Studio — Kerala Muhurtham bride in Kanjeevaram silk with temple jewellery"
+                  alt="Alenora Bridal Studio — Kerala wedding ceremony bride in Kanjeevaram silk with temple jewellery"
                   fill
                   priority
                   quality={90}
@@ -198,7 +198,7 @@ export default function BridalStudioPage() {
               <p className="text-base sm:text-lg text-muted font-sans leading-relaxed">
                 At Alenora, our certified cosmetologists treat bridal styling as bespoke couture. We study your skin
                 undertones, natural bone structure, and jewelry weights to curate a look that stays luminous, breathable,
-                and impeccably draped from the morning muhurtham to the final evening farewell.
+                and impeccably draped from the morning ceremony to the final evening farewell.
               </p>
 
               {/* Highlights List */}
@@ -228,7 +228,7 @@ export default function BridalStudioPage() {
                   <Clock className="w-5 h-5 text-gold shrink-0 mt-0.5" />
                   <div>
                     <strong className="block font-medium text-espresso">Strict Punctuality</strong>
-                    <span className="text-muted text-xs">We respect your muhurtham time down to the exact minute.</span>
+                    <span className="text-muted text-xs">We respect your ceremony schedule down to the exact minute.</span>
                   </div>
                 </div>
               </div>

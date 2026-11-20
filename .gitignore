@@ -29,6 +29,7 @@ yarn-error.log*
 # raw client uploads
 /public/Alenora/
 /public/brida-studio/
+/public/gallery/
 
 # vercel
 .vercel

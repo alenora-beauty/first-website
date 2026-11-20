@@ -110,7 +110,7 @@ export const siteImages = {
     },
     bridal: {
       url: "/studio-images/kerala-bride-kanjeevaram-silk.jpeg",
-      alt: "Alenora Kerala Muhurtham bridal makeover — Kanjeevaram silk saree and temple jewellery",
+      alt: "Alenora Kerala wedding ceremony bridal makeover — Kanjeevaram silk saree and temple jewellery",
       title: "Bridal Couture",
       caption: "Custom bridal makeovers crafted to hold their glow all through your celebration.",
     },
@@ -229,7 +229,7 @@ export const siteImages = {
     {
       name: "Placeholder Stylist C",
       role: "Bridal & Draping Specialist",
-      specialty: "Muhurtham Makeup, Saree Art & Mehendi",
+      specialty: "Bridal Ceremony Makeup, Saree Art & Mehendi",
       image: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=800&q=80",
     },
     {
@@ -276,13 +276,13 @@ export const siteImages = {
   // All photos verified 100% clean (zero logos, watermarks, or studio names)
   gallery: [
     { url: "/studio-images/bridal-pink-lehenga-portrait.jpeg",         alt: "Bridal makeover — pink lehenga with maang tikka and handcrafted jewellery" },
-    { url: "/studio-images/kerala-bride-kanjeevaram-silk.jpeg",         alt: "Kerala Muhurtham bride in Kanjeevaram silk saree with temple ornaments" },
+    { url: "/studio-images/kerala-bride-kanjeevaram-silk.jpeg",         alt: "Kerala wedding ceremony bride in Kanjeevaram silk saree with temple ornaments" },
     { url: "/studio-images/kerala-bride-red-kasavu-outdoor.jpeg",       alt: "Traditional Kerala bride in red kasavu saree with gold jewellery" },
     { url: "/studio-images/bridal-party-celebration-lehenga.jpeg",      alt: "Joyful celebration bridal makeover — pastel lehengas with floral styling" },
     { url: "/studio-images/groom-white-kurta-indoor.jpeg",              alt: "Clean men's groom styling — traditional ivory silk kurta and mundu" },
     { url: "/studio-images/bridal-white-embroidered-lehenga.jpeg",      alt: "Regal bride in silver-embroidered white lehenga with floral hair garland" },
     { url: "/studio-images/bride-pink-lehenga-outdoor.jpeg",            alt: "Intricate bridal makeover — magenta lehenga with bridal mehendi and jewellery" },
-    { url: "/studio-images/bridal-makeup-artist-working.jpeg",          alt: "Certified bridal makeup artist applying traditional Kerala muhurtham look" },
+    { url: "/studio-images/bridal-makeup-artist-working.jpeg",          alt: "Certified bridal makeup artist applying traditional Kerala wedding ceremony look" },
     { url: "/studio-images/bridal-lilac-handcrafted-lehenga.jpeg",      alt: "Bridal couture portrait in handcrafted lilac lehenga with embroidered veil" },
     { url: "/studio-images/kerala-bride-poolside-water.jpeg",           alt: "Kerala bride in traditional kasavu saree with scenic hillside backdrop" },
     { url: "/studio-images/kids-traditional-yellow.jpeg",              alt: "Kids traditional styling — bright yellow kasavu outfit with golden jewellery" },

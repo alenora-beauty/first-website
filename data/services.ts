@@ -413,7 +413,7 @@ export const servicesData: ServiceCategory[] = [
       {
         id: "makeup-hindu-hd",
         name: "Hindu HD Bridal Makeup",
-        description: "Traditional temple gold eye look, sweat-resistant HD base, and long-wear muhurtham finish.",
+        description: "Traditional temple gold eye look, sweat-resistant HD base, and long-wear ceremony finish.",
         priceFrom: 0,
         priceNote: "Price on Consultation",
         duration: "180 mins",

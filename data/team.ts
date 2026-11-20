@@ -34,7 +34,7 @@ export const teamMembers: TeamMember[] = [
     id: "team-3",
     name: "Bridal & Draping Artist (Placeholder)",
     role: "Bridal Makeover & Henna Lead",
-    specialty: "Muhurtham Makeup, Silk Saree Pleating & Mehendi",
+    specialty: "Bridal Ceremony Makeup, Silk Saree Pleating & Mehendi",
     image: siteImages.team[2].image,
     isPlaceholder: true,
   },

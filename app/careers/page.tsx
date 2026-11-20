@@ -63,9 +63,9 @@ export default function CareersPage() {
   };
 
   return (
-    <div className="pt-28 pb-20">
+    <div className="pb-20">
       {/* Header Banner */}
-      <section className="py-16 sm:py-24 bg-cream border-b border-hairline">
+      <section className="pt-28 sm:pt-36 lg:pt-40 pb-16 sm:pb-24 bg-cream border-b border-hairline">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
           <span className="text-xs uppercase tracking-[0.25em] text-terracotta font-semibold font-sans mb-3 block">
             Careers at Alenora

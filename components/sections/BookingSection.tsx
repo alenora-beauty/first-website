@@ -478,7 +478,7 @@ export default function BookingSection({ index = "11" }: BookingSectionProps) {
                     rows={3}
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Tell us if you have hair allergies, need bridal muhurtham timing, or want kids styling..."
+                    placeholder="Tell us if you have hair allergies, need wedding ceremony timing, or want kids styling..."
                     className="w-full px-4 py-3 rounded-xl bg-ivory border border-hairline text-sm font-sans text-espresso placeholder:text-muted/60 focus:outline-none focus:ring-2 focus:ring-gold transition-colors resize-none"
                   />
                 </div>

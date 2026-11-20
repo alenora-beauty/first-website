@@ -49,7 +49,7 @@ const whyReasons: WhyReason[] = [
     number: "04 / 04",
     title: "Bridal & Occasion Specialists",
     description:
-      "From traditional Kerala Hindu muhurtham braids to contemporary Christian and Muslim wedding styling, our artists preserve your natural elegance for photo-perfect moments.",
+      "From traditional Kerala floral braids to contemporary Christian and Muslim wedding styling, our artists preserve your natural elegance for photo-perfect moments.",
     tags: ["Long-Wear HD", "Saree Artistry", "Herbal Henna"],
     image: siteImages.whyUs[3].url,
   },
