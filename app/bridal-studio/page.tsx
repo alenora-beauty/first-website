@@ -5,6 +5,8 @@ import { siteConfig, buildWhatsAppLink } from "@/data/site";
 import { siteImages } from "@/data/images";
 import Button from "@/components/ui/Button";
 import SectionHeader from "@/components/ui/SectionHeader";
+import CurtainGallery3D from "@/components/bridal/CurtainGallery3D";
+import bridalImages from "@/data/bridalImages.json";
 import {
   Sparkles,
   Heart,
@@ -18,7 +20,6 @@ import {
   ArrowRight,
   Gem,
   Award,
-  Star,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -26,171 +27,6 @@ export const metadata: Metadata = {
   description:
     "Dedicated luxury bridal studio at Alenora Beauty Studio, East Hill, Kozhikode. Specializing in 18-hour sweat-proof bridal makeovers, master silk saree draping, organic herbal mehendi, and complete bridal dressing assistance.",
 };
-
-const bridalPillars = [
-  {
-    number: "01",
-    title: "Sacred Muhurtham Makeover",
-    tagline: "18-Hour Humidity & Cry-Proof Artistry",
-    description:
-      "Engineered specifically for Kerala's tropical humidity, sacred temple rituals, and high-intensity wedding photography. We sculpt an ethereal matte-dewy skin base that never oxidizes or cracks, finished with smudge-proof temple-gold eye contouring and waterproof lip contour.",
-    highlights: [
-      "Custom shade-matching using Dior, MAC & Charlotte Tilbury",
-      "Camera-ready HD base with zero flashback under stage lighting",
-      "Smudge-proof kajal, winged liner, and weightless silk lashes",
-      "Long-lasting sweat & tear resistant formulation",
-    ],
-    image: "/studio-images/bridal-white-silver-lehenga.jpeg",
-    alt: "Alenora bridal makeover — full bridal look with jewellery and saree styling",
-  },
-  {
-    number: "02",
-    title: "Master Saree Draping & Silhouette Art",
-    tagline: "Pin-Perfect Pleating for Kanjeevaram & Kasavu",
-    description:
-      "A bride's saree should move with majesty and remain impeccably pleated from morning pradakshinam to evening reception. Our master draping artists hand-pleat, steam-press, and securely anchor Kanjeevaram, Set Mundu, tissue silks, and Banarasi drapes with surgical precision.",
-    highlights: [
-      "Custom box-pleat width tailored to your height and silhouette",
-      "Zero-damage hidden safety pinning that protects delicate gold zari",
-      "Oddiyanam (waistband) anchoring that prevents sagging",
-      "Engineered comfort for sitting, walking, and greeting guests effortlessly",
-    ],
-    image: "/studio-images/kerala-bride-red-kasavu-wall.jpeg",
-    alt: "Traditional Kerala bride in red kasavu saree — Alenora master saree draping",
-  },
-  {
-    number: "03",
-    title: "Couture Hair & Floral Architecture",
-    tagline: "Traditional Jasmine Braids to Romantic Hollywood Waves",
-    description:
-      "Hair is the crown of the bridal ensemble. Whether you envision a traditional jasmine-encased South Indian plait adorned with gold jada billalu, or modern soft romantic waves with baby's breath for your reception, our artists sculpt hairstyles that stay locked in place.",
-    highlights: [
-      "Signature Kerala poola jada & fresh Madurai jasmine setting",
-      "Structural root volumizing and heat-protected texture prep",
-      "Crown, tiara, and Christian lace veil anchoring",
-      "Zero frizz guarantee even during outdoor ceremonies",
-    ],
-    image: "/studio-images/kerala-bride-floral-hair.jpeg",
-    alt: "Kerala bride with traditional floral jasmine hair braid and gold jewellery — Alenora",
-  },
-  {
-    number: "04",
-    title: "Artisan Organic Bridal Mehendi",
-    tagline: "100% Chemical-Free Henna with Deep Mahogany Stain",
-    description:
-      "We hand-craft our own organic mehendi cones using triple-filtered Rajasthani Sojat henna, therapeutic eucalyptus, and clove oils. Free from toxic PPD and chemicals, our henna produces rich, dark mahogany stains that tell your personal love story.",
-    highlights: [
-      "Custom storytelling motifs: couple portraits, initials & mandapam art",
-      "Intricate Marwari, Arabic fusion, and delicate jaali work",
-      "Both hands (elbow length) and feet coverage",
-      "Complimentary after-care seal balm for maximum color intensity",
-    ],
-    image: "/studio-images/bride-pink-lehenga-outdoor.jpeg",
-    alt: "Bride with intricate organic mehendi and floral jewellery — Alenora bridal artistry",
-  },
-  {
-    number: "05",
-    title: "Complete Bridal Dressing & Jewellery Setting",
-    tagline: "In-Suite Assistance for Every Piece of Heirloom Gold",
-    description:
-      "Getting into a bridal ensemble is an art form. Our lead stylists personally dress you in our private sanctuary—positioning every necklace tier, aligning maang tikka pendants to your hairline, securing heavy earrings with weight-distributing tape, and draping dupattas.",
-    highlights: [
-      "Oddiyanam & heavy waist jewelry balancing with zero slip",
-      "Maang tikka & forehead jewelry centered with precision",
-      "Earring support & invisible earlobe relief tape",
-      "Final 360-degree mirrors and photoshoot-ready touch-up",
-    ],
-    image: "/studio-images/bridal-trio-white-gown.jpeg",
-    alt: "Bridal party fully dressed — Alenora complete dressing and jewellery setting",
-  },
-  {
-    number: "06",
-    title: "Pre-Bridal Radiance Countdown",
-    tagline: "Clinical Skin & Hair Prep 30 Days Before the Wedding",
-    description:
-      "Flawless wedding makeup begins with healthy, luminous skin. Our cosmetologist-designed 4-week countdown combines gentle botanical brightening peels, hydra-infusion facials, restorative hair spa therapy, and full-body detan polishing so your skin glows from within.",
-    highlights: [
-      "Clinical skin texture mapping & customized facial calendar",
-      "Intensive hydration infusion for plump, glass-skin prep",
-      "Restorative botanical hair spa for glossy, manageable locks",
-      "Full body detan, gentle exfoliation & relaxation massage",
-    ],
-    image: "/studio-images/bridal-makeup-artist-working.jpeg",
-    alt: "Alenora cosmetologist applying pre-bridal skin care and makeup — 30-day radiance countdown",
-  },
-];
-
-const bridalPackages = [
-  {
-    name: "The Muhurtham Classic",
-    subtitle: "For the Traditional Kerala Bride",
-    price: "₹12,000",
-    priceNote: "Starting from • In-studio private suite",
-    popular: false,
-    features: [
-      "18-hour sweat-proof HD Muhurtham Makeover",
-      "Signature long-wear waterproof eye & lip artistry",
-      "Traditional jasmine braid or sculpted bridal hair",
-      "Master silk saree draping with crease-proof box pleats",
-      "Complete bridal dressing & heirloom jewelry setting",
-      "Complimentary touch-up kit (blotting sheets & matching lip pot)",
-    ],
-  },
-  {
-    name: "Royal Alenora Grand Bridal",
-    subtitle: "Muhurtham + Reception (2 Looks)",
-    price: "₹22,000",
-    priceNote: "Starting from • Complete day reservation",
-    popular: true,
-    features: [
-      "Look 1: Traditional sacred Muhurtham makeover & saree draping",
-      "Look 2: Evening Reception Glam (dewy glass skin & Hollywood waves)",
-      "Two master saree / lehenga drapes with styling change",
-      "Full jewelry change & hair architecture restyle",
-      "Private VIP Bridal Suite access throughout the day",
-      "Pre-wedding makeup trial & shade-matching consultation",
-      "Emergency touch-up kit & bridal concierge support",
-    ],
-  },
-  {
-    name: "The Bride & Groom Harmony Suite",
-    subtitle: "Complete Couple Wedding Ceremony Package",
-    price: "₹28,000",
-    priceNote: "Starting from • Bride & Groom paired styling",
-    popular: false,
-    features: [
-      "Everything in the Royal Alenora 2-Look Grand Bridal Package",
-      "Groom Signature Makeover: camera-ready detan & matte finish",
-      "Groom precision beard sculpt & executive hair design",
-      "Groom scalp detox therapy & relaxing shoulder reflexology",
-      "Paired color-harmony consultation for photography",
-      "Coordinated schedule so the couple is ready together on time",
-    ],
-  },
-];
-
-const bridalFaqs = [
-  {
-    q: "How far in advance should I reserve my wedding date?",
-    a: "We accept bridal bookings up to 6–9 months in advance. Because we only host one bride per slot to ensure 100% undivided attention in our private bridal suite, prime auspicious wedding muhurtham dates fill up quickly. We recommend reserving as soon as your wedding date is finalized.",
-  },
-  {
-    q: "Do you offer bridal makeup trial sessions?",
-    a: "Yes! We strongly recommend a bridal trial 2–4 weeks before your ceremony. During the trial, our senior cosmetologist tests foundation shades under 5500K daylight-calibrated lighting, evaluates your skin undertones, tests your chosen hairstyle, and checks saree pleat proportions.",
-  },
-  {
-    q: "Will the makeup hold up in Kerala's humidity and sweat?",
-    a: "Absolutely. All Alenora bridal bases are formulated with medical-grade setting sealers, oil-free primers, and sweat-resistant luxury products (Dior, MAC, Charlotte Tilbury). Our makeup is engineered to withstand long ceremonial homams, outdoor photo sessions, and emotional moments for up to 18 hours without cracking or melting.",
-  },
-  {
-    q: "Do you travel to wedding venues or hotels across Kozhikode?",
-    a: "Yes, our bridal master team can travel to your home, resort, or wedding venue in Kozhikode and surrounding districts upon request. Travel and on-location setup fees apply. Alternatively, brides love our tranquil private bridal suite at East Hill for an unhurried, luxury experience.",
-  },
-  {
-    q: "Can you accommodate the groom and bridal party / bridesmaids?",
-    a: "Yes! While the bride is our primary focus, our studio has dedicated styling stations for the groom and family. We offer occasion makeup, saree draping, and hair styling for bridesmaids, mothers, and sisters so the entire wedding party looks seamlessly coordinated.",
-  },
-];
 
 export default function BridalStudioPage() {
   const bridalWhatsAppMessage =
@@ -259,12 +95,12 @@ export default function BridalStudioPage() {
                   <span>Reserve Bridal Consultation</span>
                 </Button>
                 <Button
-                  href="#packages"
+                  href="#bridal-gallery"
                   variant="secondary"
                   size="lg"
                   className="shadow-soft px-7 py-3.5 text-sm sm:text-base font-medium"
                 >
-                  <span>Explore Packages ↓</span>
+                  <span>Explore Bridal Gallery ↓</span>
                 </Button>
               </div>
 
@@ -294,14 +130,6 @@ export default function BridalStudioPage() {
                   className="object-cover object-[center_20%] group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-espresso/85 via-espresso/15 to-transparent pointer-events-none" />
-
-                {/* Floating Badge Top-Right */}
-                <div className="absolute top-4 right-4 bg-espresso/85 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-gold/40 shadow-soft">
-                  <span className="text-[11px] font-mono uppercase tracking-widest text-gold font-semibold flex items-center gap-1.5">
-                    <Crown className="w-3 h-3 text-gold" />
-                    Muhurtham Special
-                  </span>
-                </div>
 
                 {/* Bottom Story Card on Image */}
                 <div className="absolute bottom-5 inset-x-5 p-4 rounded-xl bg-black/55 backdrop-blur-md border border-white/20 text-ivory space-y-1 shadow-glass">
@@ -409,65 +237,20 @@ export default function BridalStudioPage() {
         </div>
       </section>
 
-      {/* 3. The 6 Pillars of the Alenora Bride */}
-      <section className="py-24 sm:py-32 bg-ivory">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 3. Real Alenora Brides — 3D Curtain Gallery */}
+      <section id="bridal-gallery" className="py-20 sm:py-28 bg-ivory overflow-hidden border-b border-hairline">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-12 text-center">
           <SectionHeader
-            index="01"
-            eyebrow="Specialized Bridal Disciplines"
-            title="The Six Pillars of the Alenora Bride."
-            description="Every nuance of your wedding appearance—from the precision of your saree pleats to the chemical-free stain of your mehendi—is crafted in-house by dedicated specialists."
-            className="mb-16 sm:mb-20"
+            eyebrow="Real Alenora Brides • Couture Portfolio"
+            title="Crafted for a Lifetime of Memories."
+            description="Every pleat placed with intention, every shade matched to skin undertone, and every smile genuine. Browse through our cherished real bridal gallery."
+            className="text-center max-w-3xl mx-auto"
           />
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {bridalPillars.map((pillar) => (
-              <div
-                key={pillar.number}
-                className="rounded-salon bg-cream border border-hairline overflow-hidden shadow-soft hover:shadow-elevated transition-all duration-300 flex flex-col group"
-              >
-                {/* Image Window */}
-                <div className="relative h-60 w-full overflow-hidden bg-espresso">
-                  <Image
-                    src={pillar.image}
-                    alt={pillar.alt}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-espresso/80 via-transparent to-transparent" />
-                  <div className="absolute top-4 left-4 font-mono text-xs text-gold bg-espresso/70 backdrop-blur-md px-3 py-1 rounded-full border border-gold/30">
-                    {pillar.number}
-                  </div>
-                  <div className="absolute bottom-3 left-4 right-4 text-xs font-mono uppercase tracking-wider text-gold font-semibold">
-                    {pillar.tagline}
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
-                  <div className="space-y-2">
-                    <h3 className="font-serif text-2xl font-normal text-espresso group-hover:text-terracotta transition-colors">
-                      {pillar.title}
-                    </h3>
-                    <p className="text-xs sm:text-sm text-muted font-sans leading-relaxed">
-                      {pillar.description}
-                    </p>
-                  </div>
-
-                  {/* Highlights Bullet List */}
-                  <div className="pt-3 border-t border-hairline space-y-2">
-                    {pillar.highlights.map((item, idx) => (
-                      <div key={idx} className="flex items-start gap-2 text-xs font-sans text-espresso/90">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-gold shrink-0 mt-0.5" />
-                        <span>{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+        {/* 3D Curtain Gallery Component */}
+        <div className="w-full">
+          <CurtainGallery3D images={bridalImages} />
         </div>
       </section>
 
@@ -549,86 +332,7 @@ export default function BridalStudioPage() {
         </div>
       </section>
 
-      {/* 5. Bridal Packages & Transparent Pricing */}
-      <section id="packages" className="py-24 sm:py-32 bg-cream border-y border-hairline">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            index="02"
-            eyebrow="Curated Bridal Collections"
-            title="Bridal Makeover Packages."
-            description="Transparent pricing, unhurried time allocations, and complete in-suite dressing assistance. Custom packages for on-location and multi-day destination weddings available upon consultation."
-            className="mb-16"
-          />
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
-            {bridalPackages.map((pkg) => (
-              <div
-                key={pkg.name}
-                className={`rounded-salon p-8 flex flex-col justify-between transition-all duration-300 relative ${
-                  pkg.popular
-                    ? "bg-espresso text-ivory shadow-elevated border-2 border-gold scale-[1.02] lg:-translate-y-2"
-                    : "bg-ivory text-espresso shadow-soft border border-hairline"
-                }`}
-              >
-                {pkg.popular && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gold text-espresso font-sans text-[11px] font-bold uppercase tracking-widest px-4 py-1 rounded-full shadow-soft">
-                    Most Popular Choice
-                  </div>
-                )}
-
-                <div className="space-y-6">
-                  <div>
-                    <h3 className={`font-serif text-2xl font-normal ${pkg.popular ? "text-ivory" : "text-espresso"}`}>
-                      {pkg.name}
-                    </h3>
-                    <p className={`text-xs font-sans mt-1 ${pkg.popular ? "text-ivory/70" : "text-muted"}`}>
-                      {pkg.subtitle}
-                    </p>
-                  </div>
-
-                  <div className="pt-2 border-t border-hairline">
-                    <div className="flex items-baseline gap-2">
-                      <span className="font-serif text-4xl sm:text-5xl font-medium tracking-tight text-gold">
-                        {pkg.price}
-                      </span>
-                    </div>
-                    <span className={`text-[11px] font-sans ${pkg.popular ? "text-ivory/60" : "text-muted"}`}>
-                      {pkg.priceNote}
-                    </span>
-                  </div>
-
-                  <div className="space-y-3 pt-2">
-                    <span className={`text-xs font-mono uppercase tracking-wider font-semibold block ${pkg.popular ? "text-gold" : "text-terracotta"}`}>
-                      Package Inclusions:
-                    </span>
-                    <ul className="space-y-2.5 text-xs sm:text-sm font-sans">
-                      {pkg.features.map((feat, idx) => (
-                        <li key={idx} className="flex items-start gap-2.5">
-                          <CheckCircle2 className={`w-4 h-4 shrink-0 mt-0.5 ${pkg.popular ? "text-gold" : "text-terracotta"}`} />
-                          <span className={pkg.popular ? "text-ivory/90" : "text-espresso/90"}>{feat}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="pt-8 mt-6 border-t border-hairline">
-                  <Button
-                    href={buildWhatsAppLink(`Hi Alenora, I would like to reserve or discuss the ${pkg.name} package for my wedding date.`)}
-                    external
-                    variant={pkg.popular ? "gold" : "primary"}
-                    size="md"
-                    className="w-full text-center font-semibold"
-                  >
-                    <span>Check Date Availability</span>
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* 6. The 4-Step Bridal Journey */}
       <section className="py-24 sm:py-32 bg-ivory">
@@ -674,35 +378,7 @@ export default function BridalStudioPage() {
         </div>
       </section>
 
-      {/* 7. Frequently Asked Questions for Brides */}
-      <section className="py-20 sm:py-28 bg-cream border-t border-hairline">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="text-xs uppercase tracking-[0.25em] text-terracotta font-semibold font-sans mb-2 block">
-              Clear &amp; Transparent
-            </span>
-            <h2 className="font-serif text-3xl sm:text-4xl text-espresso font-normal">
-              Frequently Asked Bridal Questions
-            </h2>
-          </div>
-
-          <div className="space-y-6">
-            {bridalFaqs.map((faq, idx) => (
-              <div key={idx} className="p-6 rounded-2xl bg-ivory border border-hairline shadow-soft space-y-2">
-                <h3 className="font-serif text-lg sm:text-xl font-medium text-espresso flex items-start gap-3">
-                  <Star className="w-4 h-4 text-gold shrink-0 mt-1" />
-                  <span>{faq.q}</span>
-                </h3>
-                <p className="text-xs sm:text-sm text-muted font-sans leading-relaxed pl-7">
-                  {faq.a}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 8. Bottom Final Call to Action */}
+      {/* 6. Bottom Final Call to Action */}
       <section className="py-20 sm:py-28 bg-espresso text-ivory text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-radial-gradient opacity-20 pointer-events-none" />
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">

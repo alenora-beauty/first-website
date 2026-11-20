@@ -63,9 +63,6 @@ export default function WhyUsSection() {
           {/* Left Sticky Column */}
           <div className="lg:col-span-5 lg:sticky lg:top-32 space-y-6">
             <div className="flex items-center gap-3 text-xs uppercase tracking-[0.25em] font-sans font-semibold text-terracotta">
-              <span className="font-mono text-xs px-2.5 py-0.5 rounded-full border border-terracotta/30 bg-terracotta/10 text-terracotta">
-                04
-              </span>
               <span>Why Alenora</span>
             </div>
 

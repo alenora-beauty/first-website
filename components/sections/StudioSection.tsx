@@ -66,11 +66,8 @@ export default function StudioSection() {
   return (
     <section id="studio" className="py-24 sm:py-32 bg-ivory text-espresso overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Eyebrow & Index */}
+        {/* Eyebrow */}
         <div className="flex items-center gap-3 text-xs uppercase tracking-[0.25em] font-sans font-semibold text-terracotta mb-6">
-          <span className="font-mono text-xs px-2.5 py-0.5 rounded-full border border-terracotta/30 bg-terracotta/10 text-terracotta">
-            02
-          </span>
           <span>The Alenora Philosophy</span>
         </div>
 

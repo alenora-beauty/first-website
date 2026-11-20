@@ -9,7 +9,11 @@ import Marquee from "@/components/ui/Marquee";
 import Button from "@/components/ui/Button";
 import { Instagram, ArrowUpRight } from "lucide-react";
 
-export default function GallerySection() {
+interface GallerySectionProps {
+  index?: string;
+}
+
+export default function GallerySection({ index = "08" }: GallerySectionProps) {
   const galleryItems = siteImages.gallery;
   const row1 = galleryItems.slice(0, 7);
   const row2 = galleryItems.slice(7, 14);
@@ -18,7 +22,7 @@ export default function GallerySection() {
     <section id="gallery" className="py-24 sm:py-32 bg-cream text-espresso overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
         <SectionHeader
-          index="07"
+          index={index}
           eyebrow="Visual Journal"
           title="Fresh from the studio."
           description="A glimpse of our latest hair transformations, bridal drapes, skin rituals and clean groom sculpting."

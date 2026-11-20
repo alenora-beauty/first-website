@@ -30,17 +30,17 @@ export default function HomePage() {
       {/* 06. Team */}
       <TeamSection />
 
-      {/* Reviews (Rendered ONLY if showReviews is true in site.ts) */}
-      <ReviewsSection />
+      {/* 07. Client Testimonials */}
+      <ReviewsSection index="07" />
 
-      {/* 07. Gallery */}
-      <GallerySection />
+      {/* 08. Gallery */}
+      <GallerySection index="08" />
 
-      {/* 08. FAQ */}
-      <FaqSection index="08" />
+      {/* 09. FAQ */}
+      <FaqSection index="09" />
 
-      {/* 09. Booking */}
-      <BookingSection index="09" />
+      {/* 10. Booking */}
+      <BookingSection index="10" />
     </>
   );
 }

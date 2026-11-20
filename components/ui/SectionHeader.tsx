@@ -30,7 +30,7 @@ export default function SectionHeader({
         align === "center" ? "mx-auto text-center" : "text-left"
       } ${className}`}
     >
-      {(index || eyebrow) && (
+      {eyebrow && (
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -40,18 +40,7 @@ export default function SectionHeader({
             align === "center" ? "justify-center" : "justify-start"
           } ${isDark ? "text-gold" : "text-terracotta"}`}
         >
-          {index && (
-            <span
-              className={`font-mono text-xs px-2 py-0.5 rounded-full border ${
-                isDark
-                  ? "border-gold/30 bg-gold/10 text-gold"
-                  : "border-terracotta/30 bg-terracotta/10 text-terracotta"
-              }`}
-            >
-              {index}
-            </span>
-          )}
-          {eyebrow && <span>{eyebrow}</span>}
+          <span>{eyebrow}</span>
         </motion.div>
       )}
 

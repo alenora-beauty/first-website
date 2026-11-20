@@ -97,9 +97,8 @@ export const siteConfig: SiteConfig = {
     code: "INR",
     locale: "en-IN",
   },
-  // IMPORTANT: The studio has no online reviews yet.
-  // Set showReviews to false to prevent reviews section and ratings from rendering.
-  showReviews: false,
+  // Set showReviews to true to display client testimonials.
+  showReviews: true,
   navLinks: [
     { label: "About", href: "/about" },
     { label: "Bridal Studio", href: "/bridal-studio" },
