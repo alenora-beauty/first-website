@@ -299,7 +299,7 @@ export default function AboutClient() {
                 {/* Main Visual Image Card */}
                 <div className="relative aspect-[4/5] rounded-salon overflow-hidden shadow-elevated border-2 border-hairline bg-ivory group">
                   <Image
-                    src="/studio-images/bridal-party-celebration-lehenga.jpeg"
+                    src="/studio-images/bridal-party-celebration-lehenga.webp"
                     alt="Celebration and bridal beauty artistry at Alenora Beauty Studio"
                     fill
                     sizes="(max-width: 1024px) 100vw, 42vw"

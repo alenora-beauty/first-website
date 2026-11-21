@@ -100,7 +100,7 @@ export const clientReviews: ReviewItem[] = [
     clientName: "Verified Customer",
     initial: "V",
     color: "#831843",
-    avatarUrl: "/testimonials/butterfly-client.jpg",
+    avatarUrl: "/testimonials/butterfly-client.webp",
     role: "Customer",
     serviceReceived: "Butterfly Haircut & Conditioning",
     rating: 5,

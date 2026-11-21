@@ -83,7 +83,7 @@ export default function GalleryPage() {
         {/* Background Image Container */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/service-cover/service-cover.png"
+            src="/service-cover/service-cover.webp"
             alt="Alenora Studio Portfolio Cover"
             fill
             priority

@@ -19,7 +19,7 @@ export default function ContactPage() {
         {/* Background Image Container */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/contact-hero-cover.jpg"
+            src="/images/contact-hero-cover.webp"
             alt="Alenora Beauty Studio Welcome Atelier & Reception"
             fill
             priority

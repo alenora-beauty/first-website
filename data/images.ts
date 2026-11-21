@@ -25,7 +25,7 @@ export interface HeroSlide {
 export const siteImages = {
   // Hero section — About page visual
   hero: {
-    main: "/studio-images/studio-exterior-day.jpeg",
+    main: "/studio-images/studio-exterior-day.webp",
     alt: "Alenora Beauty Studio — East Hill, Kozhikode",
   },
 
@@ -33,7 +33,7 @@ export const siteImages = {
   heroSlides: [
     {
       id: "slide-1",
-      url: "/sliders/slider01.JPG.jpeg",
+      url: "/sliders/slider01.webp",
       alt: "Kerala bride in traditional Kanjeevaram silk saree with gold jewellery — Alenora bridal makeover",
       category: "Bridal Makeover & Silk Saree Draping",
       fit: "cover" as HeroSlide["fit"],
@@ -41,7 +41,7 @@ export const siteImages = {
     },
     {
       id: "slide-2",
-      url: "/sliders/slider02.jpg.jpeg",
+      url: "/sliders/slider02.webp",
       alt: "Celebration makeover — joyful brides in intricately embroidered pastel lehengas, Alenora Beauty Studio",
       category: "Bridal Party & Heritage Makeover",
       fit: "cover" as HeroSlide["fit"],
@@ -49,7 +49,7 @@ export const siteImages = {
     },
     {
       id: "slide-3",
-      url: "/sliders/slider03.JPG.jpeg",
+      url: "/sliders/slider03.webp",
       alt: "Elegant saree draping and signature hair styling — Alenora Beauty Studio",
       category: "Saree Styling & Makeup Artistry",
       fit: "contain" as HeroSlide["fit"],
@@ -58,7 +58,7 @@ export const siteImages = {
     },
     {
       id: "slide-4",
-      url: "/sliders/slider04.JPG.jpeg",
+      url: "/sliders/slider04.webp",
       alt: "Traditional Kerala bride in red kasavu saree with gold temple jewellery — outdoor bridal portrait",
       category: "Traditional Kerala Bridal Look",
       fit: "cover" as HeroSlide["fit"],
@@ -66,7 +66,7 @@ export const siteImages = {
     },
     {
       id: "slide-5",
-      url: "/sliders/slider05.jpg.jpeg",
+      url: "/sliders/slider05.webp",
       alt: "Serene poolside bridal silhouette in white kasavu saree — Alenora bridal styling",
       category: "Outdoor Bridal Silhouette",
       fit: "cover" as HeroSlide["fit"],
@@ -74,7 +74,7 @@ export const siteImages = {
     },
     {
       id: "slide-6",
-      url: "/sliders/slider07.jpg.jpeg",
+      url: "/sliders/slider07.webp",
       alt: "Regal bride in silver-embroidered white lehenga with floral hair garland — Alenora bridal artistry",
       category: "Contemporary Bridal Lehenga Styling",
       fit: "cover" as HeroSlide["fit"],
@@ -82,7 +82,7 @@ export const siteImages = {
     },
     {
       id: "slide-7",
-      url: "/sliders/slider08.jpg.jpeg",
+      url: "/sliders/slider08.webp",
       alt: "Bridal portrait in handcrafted lilac lehenga with embroidered veil — Alenora Beauty Studio",
       category: "Handcrafted Bridal Couture Makeover",
       fit: "cover" as HeroSlide["fit"],
@@ -90,44 +90,44 @@ export const siteImages = {
     },
   ],
   heroFloatingCard: {
-    groom: "/studio-images/groom-portrait-white-mundu.jpeg",
+    groom: "/studio-images/groom-portrait-white-mundu.webp",
     alt: "Groom makeover consultation at Alenora",
   },
 
   // Studio carousel cards — real Alenora photography
   studioCards: {
     hair: {
-      url: "/studio-images/saree-green-floral-indoor.jpeg",
+      url: "/studio-images/saree-green-floral-indoor.webp",
       alt: "Elegant saree styling and hair artistry at Alenora Beauty Studio",
       title: "Hair Craft",
       caption: "Precision cuts, bespoke colouring, and rejuvenating botanical hair spas.",
     },
     skin: {
-      url: "/studio-images/bridal-makeup-artist-working.jpeg",
+      url: "/studio-images/bridal-makeup-artist-working.webp",
       alt: "Alenora certified cosmetologist applying bridal makeup and skin treatment",
       title: "Skin Aesthetics",
       caption: "Targeted brightening facials, deep clean-ups, and gentle detan therapies.",
     },
     bridal: {
-      url: "/studio-images/kerala-bride-kanjeevaram-silk.jpeg",
+      url: "/studio-images/kerala-bride-kanjeevaram-silk.webp",
       alt: "Alenora Kerala wedding ceremony bridal makeover — Kanjeevaram silk saree and temple jewellery",
       title: "Bridal Couture",
       caption: "Custom bridal makeovers crafted to hold their glow all through your celebration.",
     },
     saree: {
-      url: "/studio-images/kerala-bride-red-kasavu-wall.jpeg",
+      url: "/studio-images/kerala-bride-red-kasavu-wall.webp",
       alt: "Traditional Kerala bride in red kasavu saree — Alenora saree draping artistry",
       title: "Saree Draping",
       caption: "Pin-perfect traditional Kerala, Kanjeevaram, and modern fusion drape styles.",
     },
     mehendi: {
-      url: "/studio-images/bride-pink-lehenga-outdoor.jpeg",
+      url: "/studio-images/bride-pink-lehenga-outdoor.webp",
       alt: "Bride styled with intricate mehendi and jewellery at Alenora Beauty Studio",
       title: "Mehendi & Tattoo",
       caption: "Intricate herbal henna storytelling and clean, hygienic artistic body art.",
     },
     grooming: {
-      url: "/studio-images/groom-white-kurta-indoor.jpeg",
+      url: "/studio-images/groom-white-kurta-indoor.webp",
       alt: "Groom styling and grooming at Alenora Beauty Studio, Kozhikode",
       title: "Men's Grooming",
       caption: "Sharp beard sculpting, scalp fades, and complete groom prep packages.",
@@ -136,30 +136,30 @@ export const siteImages = {
 
   // Service Category Cover Images
   services: {
-    hair: "/services/hairdesign-colour-and-treatments.png",
-    skin: "/services/facials-and-bleach-treatment.png",
-    bridal: "/services/bridal-special-package-makeup-hair-styling-and-saree-draping.png",
-    mehendiTattoo: "/studio-images/bride-pink-lehenga-outdoor.jpeg",
-    mensGrooming: "/studio-images/groom-portrait-white-mundu.jpeg",
-    groomPackageCover: "/studio-images/groom-white-kurta-indoor.jpeg",
+    hair: "/services/hairdesign-colour-and-treatments.webp",
+    skin: "/services/facials-and-bleach-treatment.webp",
+    bridal: "/services/bridal-special-package-makeup-hair-styling-and-saree-draping.webp",
+    mehendiTattoo: "/studio-images/bride-pink-lehenga-outdoor.webp",
+    mensGrooming: "/studio-images/groom-portrait-white-mundu.webp",
+    groomPackageCover: "/studio-images/groom-white-kurta-indoor.webp",
   },
 
   // Why Alenora Sticky Cards
   whyUs: [
     {
-      url: "/philosophy/certified-cosmetologists.png",
+      url: "/philosophy/certified-cosmetologists.webp",
       alt: "Certified cosmetologists at Alenora Beauty Studio, Kozhikode",
     },
     {
-      url: "/philosophy/a-personal-consultation-first.png",
+      url: "/philosophy/a-personal-consultation-first.webp",
       alt: "Personal consultation and client vision discussion at Alenora",
     },
     {
-      url: "/philosophy/One-Studio-for-the-Whole-Family.png",
+      url: "/philosophy/One-Studio-for-the-Whole-Family.webp",
       alt: "One studio for the whole family — women, men, and kids styling in Kozhikode",
     },
     {
-      url: "/philosophy/Bridal-and-occation-specialists.png",
+      url: "/philosophy/Bridal-and-occation-specialists.webp",
       alt: "Bridal and occasion specialists at Alenora Beauty Studio",
     },
   ],
@@ -254,14 +254,14 @@ export const siteImages = {
       title: "Consult",
       duration: "10 mins",
       desc: "In-depth scalp, skin texture, and aesthetic review over soothing tea to design your tailored service.",
-      image: "/studio-images/bridal-makeup-artist-working.jpeg",
+      image: "/studio-images/bridal-makeup-artist-working.webp",
     },
     {
       step: "03",
       title: "Create",
       duration: "45–180 mins",
       desc: "Impeccable execution using sanitized medical-grade tools, premium formulations, and undivided attention.",
-      image: "/studio-images/kerala-bride-kanjeevaram-silk.jpeg",
+      image: "/studio-images/kerala-bride-kanjeevaram-silk.webp",
     },
     {
       step: "04",
@@ -275,26 +275,26 @@ export const siteImages = {
   // 14 Gallery items — real Alenora studio photography (dual-row marquee)
   // All photos verified 100% clean (zero logos, watermarks, or studio names)
   gallery: [
-    { url: "/studio-images/bridal-pink-lehenga-portrait.jpeg",         alt: "Bridal makeover — pink lehenga with maang tikka and handcrafted jewellery" },
-    { url: "/studio-images/kerala-bride-kanjeevaram-silk.jpeg",         alt: "Kerala wedding ceremony bride in Kanjeevaram silk saree with temple ornaments" },
-    { url: "/studio-images/kerala-bride-red-kasavu-outdoor.jpeg",       alt: "Traditional Kerala bride in red kasavu saree with gold jewellery" },
-    { url: "/studio-images/bridal-party-celebration-lehenga.jpeg",      alt: "Joyful celebration bridal makeover — pastel lehengas with floral styling" },
-    { url: "/studio-images/groom-white-kurta-indoor.jpeg",              alt: "Clean men's groom styling — traditional ivory silk kurta and mundu" },
-    { url: "/studio-images/bridal-white-embroidered-lehenga.jpeg",      alt: "Regal bride in silver-embroidered white lehenga with floral hair garland" },
-    { url: "/studio-images/bride-pink-lehenga-outdoor.jpeg",            alt: "Intricate bridal makeover — magenta lehenga with bridal mehendi and jewellery" },
-    { url: "/studio-images/bridal-makeup-artist-working.jpeg",          alt: "Certified bridal makeup artist applying traditional Kerala wedding ceremony look" },
-    { url: "/studio-images/bridal-lilac-handcrafted-lehenga.jpeg",      alt: "Bridal couture portrait in handcrafted lilac lehenga with embroidered veil" },
-    { url: "/studio-images/kerala-bride-poolside-water.jpeg",           alt: "Kerala bride in traditional kasavu saree with scenic hillside backdrop" },
-    { url: "/studio-images/kids-traditional-yellow.jpeg",              alt: "Kids traditional styling — bright yellow kasavu outfit with golden jewellery" },
-    { url: "/studio-images/kerala-bride-poolside-silhouette.jpeg",      alt: "Serene poolside bridal portrait in white kasavu saree with temple jewellery" },
-    { url: "/studio-images/party-lehenga-engagement.jpeg",             alt: "Party and celebration makeover — engagement ceremony look" },
-    { url: "/studio-images/kerala-bride-mountain-scenic.jpeg",          alt: "Traditional Kerala bridal portrait — kasavu saree by scenic waters" },
+    { url: "/studio-images/bridal-pink-lehenga-portrait.webp",         alt: "Bridal makeover — pink lehenga with maang tikka and handcrafted jewellery" },
+    { url: "/studio-images/kerala-bride-kanjeevaram-silk.webp",         alt: "Kerala wedding ceremony bride in Kanjeevaram silk saree with temple ornaments" },
+    { url: "/studio-images/kerala-bride-red-kasavu-outdoor.webp",       alt: "Traditional Kerala bride in red kasavu saree with gold jewellery" },
+    { url: "/studio-images/bridal-party-celebration-lehenga.webp",      alt: "Joyful celebration bridal makeover — pastel lehengas with floral styling" },
+    { url: "/studio-images/groom-white-kurta-indoor.webp",              alt: "Clean men's groom styling — traditional ivory silk kurta and mundu" },
+    { url: "/studio-images/bridal-white-embroidered-lehenga.webp",      alt: "Regal bride in silver-embroidered white lehenga with floral hair garland" },
+    { url: "/studio-images/bride-pink-lehenga-outdoor.webp",            alt: "Intricate bridal makeover — magenta lehenga with bridal mehendi and jewellery" },
+    { url: "/studio-images/bridal-makeup-artist-working.webp",          alt: "Certified bridal makeup artist applying traditional Kerala wedding ceremony look" },
+    { url: "/studio-images/bridal-lilac-handcrafted-lehenga.webp",      alt: "Bridal couture portrait in handcrafted lilac lehenga with embroidered veil" },
+    { url: "/studio-images/kerala-bride-poolside-water.webp",           alt: "Kerala bride in traditional kasavu saree with scenic hillside backdrop" },
+    { url: "/studio-images/kids-traditional-yellow.webp",              alt: "Kids traditional styling — bright yellow kasavu outfit with golden jewellery" },
+    { url: "/studio-images/kerala-bride-poolside-silhouette.webp",      alt: "Serene poolside bridal portrait in white kasavu saree with temple jewellery" },
+    { url: "/studio-images/party-lehenga-engagement.webp",             alt: "Party and celebration makeover — engagement ceremony look" },
+    { url: "/studio-images/kerala-bride-mountain-scenic.webp",          alt: "Traditional Kerala bridal portrait — kasavu saree by scenic waters" },
   ],
 
   // Careers / studio ambience
   careers: {
-    hero: "/studio-images/studio-exterior-day.jpeg",
-    team: "/studio-images/bridal-makeup-artist-working.jpeg",
+    hero: "/studio-images/studio-exterior-day.webp",
+    team: "/studio-images/bridal-makeup-artist-working.webp",
   },
 };
 

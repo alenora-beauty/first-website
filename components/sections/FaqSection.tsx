@@ -53,7 +53,7 @@ export default function FaqSection({ index = "08" }: FaqSectionProps) {
       {/* ── Background: Studio Ambiance & Atmospheric Lighting ── */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <Image
-          src="/studio-images/bridal-makeup-artist-working.jpeg"
+          src="/studio-images/bridal-makeup-artist-working.webp"
           alt="Alenora studio ambience"
           fill
           sizes="100vw"

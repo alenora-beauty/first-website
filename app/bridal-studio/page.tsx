@@ -121,7 +121,7 @@ export default function BridalStudioPage() {
               {/* Main Bridal Portrait Card */}
               <div className="relative h-[480px] sm:h-[560px] lg:h-[600px] rounded-salon-lg overflow-hidden shadow-elevated border-2 border-gold/40 bg-espresso group">
                 <Image
-                  src="/studio-images/kerala-bride-kanjeevaram-silk.jpeg"
+                  src="/studio-images/kerala-bride-kanjeevaram-silk.webp"
                   alt="Alenora Bridal Studio — Kerala wedding ceremony bride in Kanjeevaram silk with temple jewellery"
                   fill
                   priority
@@ -165,7 +165,7 @@ export default function BridalStudioPage() {
             {/* Visual Showcase Card */}
             <div className="lg:col-span-6 relative h-[480px] sm:h-[580px] rounded-salon overflow-hidden shadow-elevated border border-hairline bg-espresso">
               <Image
-                src="/studio-images/kerala-bride-red-kasavu-outdoor.jpeg"
+                src="/studio-images/kerala-bride-red-kasavu-outdoor.webp"
                 alt="Alenora Bridal Makeover — traditional Kerala bride in red kasavu with gold jewellery"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -312,7 +312,7 @@ export default function BridalStudioPage() {
             {/* Right Visual Image */}
             <div className="lg:col-span-5 relative h-[420px] sm:h-[500px] rounded-salon overflow-hidden shadow-elevated border border-gold/30">
               <Image
-                src="/studio-images/groom-portrait-white-mundu.jpeg"
+                src="/studio-images/groom-portrait-white-mundu.webp"
                 alt="Groom in traditional white mundu — Alenora wedding day grooming and styling"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"

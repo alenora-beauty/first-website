@@ -19,7 +19,7 @@ export default function ServicesPage() {
         {/* Background Image Container */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/services-hero-cover.jpg"
+            src="/images/services-hero-cover.webp"
             alt="Alenora Beauty Studio Services & Atelier Interior"
             fill
             priority

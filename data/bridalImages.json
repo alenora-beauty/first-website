@@ -1,128 +1,128 @@
 [
   {
     "id": "bride-01",
-    "src": "/bridal-studio/alenora-bride-01.jpg",
-    "width": 3000,
-    "height": 3750,
+    "src": "/bridal-studio/alenora-bride-01.webp",
+    "width": 800,
+    "height": 1000,
     "aspectRatio": 0.8
   },
   {
     "id": "bride-02",
-    "src": "/bridal-studio/alenora-bride-02.jpg",
-    "width": 3000,
-    "height": 3750,
+    "src": "/bridal-studio/alenora-bride-02.webp",
+    "width": 800,
+    "height": 1000,
     "aspectRatio": 0.8
   },
   {
     "id": "bride-03",
-    "src": "/bridal-studio/alenora-bride-03.jpg",
-    "width": 3000,
-    "height": 3750,
+    "src": "/bridal-studio/alenora-bride-03.webp",
+    "width": 960,
+    "height": 1200,
     "aspectRatio": 0.8
   },
   {
     "id": "bride-04",
-    "src": "/bridal-studio/alenora-bride-04.jpg",
-    "width": 3000,
-    "height": 3750,
+    "src": "/bridal-studio/alenora-bride-04.webp",
+    "width": 960,
+    "height": 1200,
     "aspectRatio": 0.8
   },
   {
     "id": "bride-05",
-    "src": "/bridal-studio/alenora-bride-05.jpg",
-    "width": 1626,
-    "height": 2033,
+    "src": "/bridal-studio/alenora-bride-05.webp",
+    "width": 1120,
+    "height": 1400,
     "aspectRatio": 0.8
   },
   {
     "id": "bride-06",
-    "src": "/bridal-studio/alenora-bride-06.jpg",
-    "width": 3796,
-    "height": 5696,
-    "aspectRatio": 0.666
+    "src": "/bridal-studio/alenora-bride-06.webp",
+    "width": 1280,
+    "height": 1920,
+    "aspectRatio": 0.667
   },
   {
     "id": "bride-07",
-    "src": "/bridal-studio/alenora-bride-07.jpg",
-    "width": 5860,
-    "height": 3906,
+    "src": "/bridal-studio/alenora-bride-07.webp",
+    "width": 1920,
+    "height": 1280,
     "aspectRatio": 1.5
   },
   {
     "id": "bride-08",
-    "src": "/bridal-studio/alenora-bride-08.jpg",
+    "src": "/bridal-studio/alenora-bride-08.webp",
     "width": 960,
     "height": 1280,
     "aspectRatio": 0.75
   },
   {
     "id": "bride-09",
-    "src": "/bridal-studio/alenora-bride-09.jpg",
-    "width": 2000,
-    "height": 3000,
+    "src": "/bridal-studio/alenora-bride-09.webp",
+    "width": 1280,
+    "height": 1920,
     "aspectRatio": 0.667
   },
   {
     "id": "bride-10",
-    "src": "/bridal-studio/alenora-bride-10.jpg",
-    "width": 3000,
-    "height": 3750,
+    "src": "/bridal-studio/alenora-bride-10.webp",
+    "width": 960,
+    "height": 1200,
     "aspectRatio": 0.8
   },
   {
     "id": "bride-11",
-    "src": "/bridal-studio/alenora-bride-11.jpg",
-    "width": 3000,
-    "height": 3750,
+    "src": "/bridal-studio/alenora-bride-11.webp",
+    "width": 1120,
+    "height": 1400,
     "aspectRatio": 0.8
   },
   {
     "id": "bride-12",
-    "src": "/bridal-studio/alenora-bride-12.jpg",
-    "width": 3000,
-    "height": 3750,
+    "src": "/bridal-studio/alenora-bride-12.webp",
+    "width": 800,
+    "height": 1000,
     "aspectRatio": 0.8
   },
   {
     "id": "bride-13",
-    "src": "/bridal-studio/alenora-bride-13.jpg",
-    "width": 3000,
-    "height": 3750,
+    "src": "/bridal-studio/alenora-bride-13.webp",
+    "width": 960,
+    "height": 1200,
     "aspectRatio": 0.8
   },
   {
     "id": "bride-15",
-    "src": "/bridal-studio/alenora-bride-15.jpg",
-    "width": 2708,
-    "height": 4032,
-    "aspectRatio": 0.672
+    "src": "/bridal-studio/alenora-bride-15.webp",
+    "width": 940,
+    "height": 1400,
+    "aspectRatio": 0.671
   },
   {
     "id": "bride-16",
-    "src": "/bridal-studio/alenora-bride-16.jpg",
-    "width": 4352,
-    "height": 6527,
+    "src": "/bridal-studio/alenora-bride-16.webp",
+    "width": 1280,
+    "height": 1920,
     "aspectRatio": 0.667
   },
   {
     "id": "bride-17",
-    "src": "/bridal-studio/alenora-bride-17.jpg",
+    "src": "/bridal-studio/alenora-bride-17.webp",
     "width": 1008,
     "height": 1260,
     "aspectRatio": 0.8
   },
   {
     "id": "bride-18",
-    "src": "/bridal-studio/alenora-bride-18.jpg",
+    "src": "/bridal-studio/alenora-bride-18.webp",
     "width": 1008,
     "height": 1260,
     "aspectRatio": 0.8
   },
   {
     "id": "bride-19",
-    "src": "/bridal-studio/alenora-bride-19.jpg",
-    "width": 3024,
-    "height": 4032,
+    "src": "/bridal-studio/alenora-bride-19.webp",
+    "width": 600,
+    "height": 800,
     "aspectRatio": 0.75
   }
 ]
