@@ -4,99 +4,101 @@ import os
 import json
 from rapidocr_onnxruntime import RapidOCR
 
+# 100% PURE ENVIRONMENT (nature, trees, backdrops, walls) OR FLOOR ONLY
+# Strictly NO face, NO hair, NO veil, NO jewellery, NO clothing
 MASTER_CONFIGS = {
-    # 01: 3000x3750, TL logo
+    # 01: 3000x3750, TL logo -> sampled from TR pure green tree foliage
     '01': {
         'patches': [
-            {'dst_box': (160, 180, 750, 710), 'src_box': (800, 180, 1390, 710)}
+            {'dst_box': (160, 180, 750, 710), 'src_box': (2240, 180, 2830, 710)}
         ]
     },
-    # 02: 3000x3750, TL logo (the image from the user's feedback)
+    # 02: 3000x3750, TL logo -> sampled from TR pure green tree foliage
     '02': {
         'patches': [
-            {'dst_box': (160, 180, 750, 710), 'src_box': (800, 180, 1390, 710)}
+            {'dst_box': (160, 180, 750, 710), 'src_box': (2240, 180, 2830, 710)}
         ]
     },
-    # 03: 3000x3750, TL logo
+    # 03: 3000x3750, TL logo -> sampled from TR pure hillside forest greenery environment
     '03': {
         'patches': [
-            {'dst_box': (160, 180, 750, 710), 'src_box': (800, 180, 1390, 710)}
+            {'dst_box': (160, 180, 750, 710), 'src_box': (2200, 180, 2790, 710)}
         ]
     },
-    # 04: 3000x3750, TR logo
+    # 04: 3000x3750, TR logo -> sampled from TL pure dark studio environment
     '04': {
         'patches': [
-            {'dst_box': (2240, 180, 2840, 710), 'src_box': (1600, 180, 2200, 710)}
+            {'dst_box': (2240, 180, 2840, 710), 'src_box': (160, 180, 760, 710)}
         ]
     },
-    # 05: 1626x2033, TR logo -> sampled from pristine TL backdrop
+    # 05: 1626x2033, TR logo -> sampled from TL pure studio backdrop
     '05': {
         'patches': [
             {'dst_box': (1200, 90, 1550, 390), 'src_box': (50, 90, 400, 390)}
         ]
     },
-    # 09: 2000x3000, BR logo
+    # 09: 2000x3000, BR logo -> sampled from pure clean stone floor directly adjacent
     '09': {
         'patches': [
-            {'dst_box': (1530, 2550, 1930, 2910), 'src_box': (1080, 2550, 1480, 2910)}
+            {'dst_box': (1530, 2550, 1930, 2910), 'src_box': (1150, 2550, 1550, 2910)}
         ]
     },
-    # 10: 3000x3750, TL logo
+    # 10: 3000x3750, TL logo -> sampled from TR pure dark studio backdrop
     '10': {
         'patches': [
-            {'dst_box': (160, 180, 750, 710), 'src_box': (800, 180, 1390, 710)}
+            {'dst_box': (160, 180, 750, 710), 'src_box': (2240, 180, 2830, 710)}
         ]
     },
-    # 11: 3000x3750, TL logo
+    # 11: 3000x3750, TL logo -> sampled from TR pure warm beige wall environment
     '11': {
         'patches': [
-            {'dst_box': (160, 180, 750, 710), 'src_box': (800, 180, 1390, 710)}
+            {'dst_box': (160, 180, 750, 710), 'src_box': (2240, 180, 2830, 710)}
         ]
     },
-    # 12: 3000x3750, TL logo
+    # 12: 3000x3750, TL logo -> sampled from TR pure green tree foliage
     '12': {
         'patches': [
-            {'dst_box': (160, 180, 750, 710), 'src_box': (800, 180, 1390, 710)}
+            {'dst_box': (160, 180, 750, 710), 'src_box': (2240, 180, 2830, 710)}
         ]
     },
-    # 13: 3000x3750, TR logo
+    # 13: 3000x3750, TR logo -> sampled from TL pure dark studio environment
     '13': {
         'patches': [
-            {'dst_box': (2240, 180, 2840, 710), 'src_box': (1600, 180, 2200, 710)}
+            {'dst_box': (2240, 180, 2840, 710), 'src_box': (160, 180, 760, 710)}
         ]
     },
-    # 15: 2708x4032, TR logo
+    # 15: 2708x4032, TR logo -> sampled from TL pure studio wall environment
     '15': {
         'patches': [
-            {'dst_box': (1950, 380, 2700, 810), 'src_box': (1150, 380, 1900, 810)}
+            {'dst_box': (1950, 380, 2700, 810), 'src_box': (100, 380, 850, 810)}
         ]
     },
-    # 17: 1080x1350 -> patch TR logo, crop bottom 90px banner
+    # 17: 1080x1350 -> sampled from TL studio wall, crop bottom Instagram bar
     '17': {
         'patches': [
-            {'dst_box': (890, 40, 1050, 190), 'src_box': (710, 40, 870, 190)}
+            {'dst_box': (890, 40, 1050, 190), 'src_box': (50, 40, 210, 190)}
         ],
         'crop': (36, 0, 1044, 1260) # 1008x1260 (aspect 0.8)
     },
-    # 18: 1080x1350 -> patch TR logo, crop bottom 90px banner
+    # 18: 1080x1350 -> sampled from TL studio wall, crop bottom Instagram bar
     '18': {
         'patches': [
-            {'dst_box': (890, 40, 1050, 190), 'src_box': (710, 40, 870, 190)}
+            {'dst_box': (890, 40, 1050, 190), 'src_box': (50, 40, 210, 190)}
         ],
         'crop': (36, 0, 1044, 1260) # 1008x1260 (aspect 0.8)
     },
-    # 19: 3024x4032, Left + Right + Bottom
+    # 19: 3024x4032 -> wall/foliage, trees, and stone floor
     '19': {
         'patches': [
             {'dst_box': (110, 1200, 790, 1630), 'src_box': (110, 700, 790, 1130)},
-            {'dst_box': (2280, 1830, 3024, 2020), 'src_box': (2280, 1600, 3024, 1790)},
-            {'dst_box': (110, 3420, 260, 3520), 'src_box': (270, 3420, 420, 3520)}
+            {'dst_box': (2280, 1830, 3024, 2020), 'src_box': (2280, 1400, 3024, 1590)},
+            {'dst_box': (110, 3420, 260, 3520), 'src_box': (300, 3420, 450, 3520)}
         ]
     }
 }
 
 def clean_all_photos():
-    print("=== STARTING CLEAN BACKGROUND REPLACEMENT FOR BRIDAL STUDIO PHOTOS ===")
+    print("=== STARTING ENVIRONMENT & FLOOR BACKGROUND REPLACEMENT ===")
     ocr = RapidOCR()
     
     output_dir = 'public/bridal-studio'
@@ -138,7 +140,7 @@ def clean_all_photos():
         if 'crop' in cfg:
             cx1, cy1, cx2, cy2 = cfg['crop']
             cleaned = cleaned[cy1:cy2, cx1:cx2]
-            print(f"[{b_id}] Cropped to remove banner: {cleaned.shape[1]}x{cleaned.shape[0]}")
+            print(f"[{b_id}] Cropped banner: {cleaned.shape[1]}x{cleaned.shape[0]}")
             
         final_h, final_w = cleaned.shape[:2]
         
@@ -165,7 +167,7 @@ def clean_all_photos():
     with open('data/bridalImages.json', 'w') as f:
         json.dump(bridal_meta, f, indent=2)
     print("\nUpdated data/bridalImages.json with pristine verified image dimensions.")
-    print("=== ALL BRIDAL STUDIO PHOTOS SUCCESSFULLY CLEANED ===")
+    print("=== ALL BRIDAL STUDIO PHOTOS SUCCESSFULLY CLEANED WITH PURE ENVIRONMENT/FLOOR ===")
 
 if __name__ == '__main__':
     clean_all_photos()
