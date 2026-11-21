@@ -135,13 +135,18 @@ export default function ServiceMenuSection({ showPrices = true }: ServiceMenuSec
                       <div className="border-t border-hairline p-6 sm:p-8 lg:p-10 bg-ivory">
                         {/* Category Overview: Image + Description */}
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-10 items-center">
-                          <div className="lg:col-span-5 relative h-56 sm:h-64 rounded-2xl overflow-hidden shadow-soft">
+                          <div
+                            className="lg:col-span-5 relative h-56 sm:h-64 rounded-2xl overflow-hidden shadow-soft transform-gpu"
+                            style={{ transform: "translateZ(0)", isolation: "isolate" }}
+                          >
                             <Image
                               src={category.image}
                               alt={category.title}
                               fill
                               sizes="(max-width: 1024px) 100vw, 40vw"
-                              className="object-cover"
+                              className="object-cover transform-gpu"
+                              loading="lazy"
+                              decoding="async"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-espresso/60 to-transparent" />
                             <div className="absolute bottom-4 left-4 right-4 text-ivory">

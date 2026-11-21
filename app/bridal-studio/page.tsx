@@ -119,7 +119,10 @@ export default function BridalStudioPage() {
               <div className="absolute -inset-2 rounded-salon-lg bg-gradient-to-br from-gold/25 via-gold/5 to-transparent blur-sm pointer-events-none" />
 
               {/* Main Bridal Portrait Card */}
-              <div className="relative h-[480px] sm:h-[560px] lg:h-[600px] rounded-salon-lg overflow-hidden shadow-elevated border-2 border-gold/40 bg-espresso group">
+              <div
+                className="relative h-[480px] sm:h-[560px] lg:h-[600px] rounded-salon-lg overflow-hidden shadow-elevated border-2 border-gold/40 bg-espresso group transform-gpu"
+                style={{ transform: "translateZ(0)", isolation: "isolate" }}
+              >
                 <Image
                   src="/studio-images/kerala-bride-kanjeevaram-silk.webp"
                   alt="Alenora Bridal Studio — Kerala wedding ceremony bride in Kanjeevaram silk with temple jewellery"
@@ -127,7 +130,7 @@ export default function BridalStudioPage() {
                   priority
                   quality={90}
                   sizes="(max-width: 1024px) 100vw, 42vw"
-                  className="object-cover object-[center_20%] group-hover:scale-105 transition-transform duration-700 ease-out"
+                  className="object-cover object-[center_20%] group-hover:scale-105 transition-transform duration-700 ease-out transform-gpu"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-espresso/85 via-espresso/15 to-transparent pointer-events-none" />
 
@@ -163,13 +166,18 @@ export default function BridalStudioPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Visual Showcase Card */}
-            <div className="lg:col-span-6 relative h-[480px] sm:h-[580px] rounded-salon overflow-hidden shadow-elevated border border-hairline bg-espresso">
+            <div
+              className="lg:col-span-6 relative h-[480px] sm:h-[580px] rounded-salon overflow-hidden shadow-elevated border border-hairline bg-espresso transform-gpu"
+              style={{ transform: "translateZ(0)", isolation: "isolate" }}
+            >
               <Image
                 src="/studio-images/kerala-bride-red-kasavu-outdoor.webp"
                 alt="Alenora Bridal Makeover — traditional Kerala bride in red kasavu with gold jewellery"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover object-center"
+                className="object-cover object-center transform-gpu"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-espresso/80 via-espresso/20 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 text-ivory">
@@ -310,13 +318,18 @@ export default function BridalStudioPage() {
             </div>
 
             {/* Right Visual Image */}
-            <div className="lg:col-span-5 relative h-[420px] sm:h-[500px] rounded-salon overflow-hidden shadow-elevated border border-gold/30">
+            <div
+              className="lg:col-span-5 relative h-[420px] sm:h-[500px] rounded-salon overflow-hidden shadow-elevated border border-gold/30 transform-gpu"
+              style={{ transform: "translateZ(0)", isolation: "isolate" }}
+            >
               <Image
                 src="/studio-images/groom-portrait-white-mundu.webp"
                 alt="Groom in traditional white mundu — Alenora wedding day grooming and styling"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
-                className="object-cover object-center"
+                className="object-cover object-center transform-gpu"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-espresso/80 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">

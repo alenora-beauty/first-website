@@ -29,17 +29,19 @@ export default function Marquee({
       className={`group relative overflow-hidden flex whitespace-nowrap select-none ${className}`}
     >
       <div
-        className={`flex shrink-0 items-center gap-6 ${speedClass} ${
+        className={`flex shrink-0 items-center gap-6 ${speedClass} will-change-transform transform-gpu ${
           pauseOnHover ? "group-hover:[animation-play-state:paused]" : ""
         }`}
+        style={{ transform: "translate3d(0, 0, 0)", backfaceVisibility: "hidden" }}
       >
         {children}
       </div>
       <div
         aria-hidden="true"
-        className={`flex shrink-0 items-center gap-6 ${speedClass} ${
+        className={`flex shrink-0 items-center gap-6 ${speedClass} will-change-transform transform-gpu ${
           pauseOnHover ? "group-hover:[animation-play-state:paused]" : ""
         }`}
+        style={{ transform: "translate3d(0, 0, 0)", backfaceVisibility: "hidden" }}
       >
         {children}
       </div>

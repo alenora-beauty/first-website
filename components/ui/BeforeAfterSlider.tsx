@@ -103,14 +103,18 @@ export default function BeforeAfterSlider({
       style={{ touchAction: "none" }}
     >
       {/* After image (Base layer) */}
-      <div className="relative w-full h-full min-h-[380px] sm:min-h-[460px] md:min-h-[520px]">
+      <div
+        className="relative w-full h-full min-h-[380px] sm:min-h-[460px] md:min-h-[520px] transform-gpu"
+        style={{ transform: "translateZ(0)", isolation: "isolate" }}
+      >
         <Image
           src={afterImage}
           alt={afterAlt}
           fill
           sizes="(max-width: 768px) 100vw, 60vw"
-          className="object-cover"
-          priority
+          className="object-cover transform-gpu"
+          loading="lazy"
+          decoding="async"
         />
         <div className="absolute top-4 right-4 bg-espresso/80 backdrop-blur-md text-ivory text-xs uppercase tracking-widest px-3.5 py-1.5 rounded-full font-semibold pointer-events-none border border-ivory/20 shadow-sm">
           AFTER
@@ -119,8 +123,8 @@ export default function BeforeAfterSlider({
 
       {/* Before image (Clipped layer) */}
       <div
-        className="absolute inset-0 overflow-hidden"
-        style={{ width: `${sliderPosition}%` }}
+        className="absolute inset-0 overflow-hidden transform-gpu"
+        style={{ width: `${sliderPosition}%`, transform: "translateZ(0)", isolation: "isolate" }}
       >
         <div className="relative w-full h-full min-h-[380px] sm:min-h-[460px] md:min-h-[520px]">
           <div
@@ -134,8 +138,9 @@ export default function BeforeAfterSlider({
               alt={beforeAlt}
               fill
               sizes="(max-width: 768px) 100vw, 60vw"
-              className="object-cover"
-              priority
+              className="object-cover transform-gpu"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <div className="absolute top-4 left-4 bg-espresso/80 backdrop-blur-md text-ivory text-xs uppercase tracking-widest px-3.5 py-1.5 rounded-full font-semibold pointer-events-none border border-ivory/20 shadow-sm">

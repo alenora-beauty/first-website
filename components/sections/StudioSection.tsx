@@ -113,18 +113,24 @@ export default function StudioSection() {
 
       {/* Looping Horizontal Carousel of Tall Portrait Cards */}
       <div className="mt-16 sm:mt-20 overflow-hidden">
-        <div className="flex gap-6 animate-marquee hover:[animation-play-state:paused] w-max px-4">
+        <div
+          className="flex gap-6 animate-marquee hover:[animation-play-state:paused] w-max px-4 will-change-transform transform-gpu"
+          style={{ transform: "translate3d(0, 0, 0)", backfaceVisibility: "hidden" }}
+        >
           {[...studioCards, ...studioCards].map((card, idx) => (
             <div
               key={idx}
-              className="relative w-64 sm:w-72 md:w-80 h-[380px] sm:h-[440px] rounded-salon overflow-hidden shrink-0 group shadow-soft border border-hairline bg-cream"
+              style={{ transform: "translateZ(0)", isolation: "isolate" }}
+              className="relative w-64 sm:w-72 md:w-80 h-[380px] sm:h-[440px] rounded-salon overflow-hidden shrink-0 group shadow-soft border border-hairline bg-cream transform-gpu"
             >
               <Image
                 src={card.data.url}
                 alt={card.data.alt}
                 fill
                 sizes="(max-width: 640px) 256px, 320px"
-                className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out transform-gpu"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-espresso/90 via-espresso/30 to-transparent" />
 

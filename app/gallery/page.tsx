@@ -180,15 +180,18 @@ export default function GalleryPage() {
               <div
                 key={item.id}
                 onClick={() => setLightboxIndex(idx)}
-                className="group relative h-80 sm:h-96 rounded-salon overflow-hidden shadow-soft border border-hairline bg-cream cursor-pointer hover:shadow-elevated transition-all duration-500"
+                style={{ transform: "translateZ(0)", isolation: "isolate" }}
+                className="group relative h-80 sm:h-96 rounded-salon overflow-hidden shadow-soft border border-hairline bg-cream cursor-pointer hover:shadow-elevated transition-all duration-500 transform-gpu"
               >
                 <Image
                   src={item.url}
                   alt={item.alt}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  quality={95}
-                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  quality={85}
+                  loading="lazy"
+                  decoding="async"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out transform-gpu"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-espresso/85 via-espresso/20 to-transparent opacity-75 group-hover:opacity-90 transition-opacity" />
 

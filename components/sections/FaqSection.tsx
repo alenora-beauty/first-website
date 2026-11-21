@@ -24,7 +24,7 @@ interface FaqSectionProps {
 
 const categories = [
   { id: "all", label: "All Questions" },
-  { id: "booking", label: "Appointments & Policies" },
+  { id: "booking", label: "Appointments & Booking" },
   { id: "bridal", label: "Bridal & Saree Draping" },
   { id: "services", label: "Hair, Skin & Family" },
 ];
@@ -51,12 +51,17 @@ export default function FaqSection({ index = "08" }: FaqSectionProps) {
       className="relative py-24 sm:py-32 lg:py-36 bg-[#140d09] text-ivory overflow-hidden border-y border-gold/15 w-full"
     >
       {/* ── Background: Studio Ambiance & Atmospheric Lighting ── */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      <div
+        className="absolute inset-0 pointer-events-none overflow-hidden transform-gpu"
+        style={{ transform: "translateZ(0)", isolation: "isolate" }}
+      >
         <Image
           src="/studio-images/bridal-makeup-artist-working.webp"
           alt="Alenora studio ambience"
           fill
           sizes="100vw"
+          loading="lazy"
+          decoding="async"
           className="object-cover opacity-[0.04] filter blur-[2px] scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#140d09] via-[#160e0a]/95 to-[#120b08]" />

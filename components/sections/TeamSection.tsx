@@ -21,7 +21,8 @@ export default function TeamSection() {
           {teamMembers.map((member) => (
             <div
               key={member.id}
-              className="group rounded-salon bg-cream border border-hairline overflow-hidden shadow-soft hover:shadow-elevated transition-all duration-500 flex flex-col"
+              style={{ transform: "translateZ(0)", isolation: "isolate" }}
+              className="group rounded-salon bg-cream border border-hairline overflow-hidden shadow-soft hover:shadow-elevated transition-all duration-500 flex flex-col transform-gpu"
             >
               {/* Image with zoom on hover */}
               <div className="relative h-80 overflow-hidden bg-coffee/10">
@@ -30,7 +31,9 @@ export default function TeamSection() {
                   alt={member.name}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  className="object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
+                  className="object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out transform-gpu"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-espresso/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
 

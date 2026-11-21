@@ -153,15 +153,7 @@ export default function Footer() {
                   Why Alenora
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/careers"
-                  className="text-gold/90 hover:text-gold font-medium inline-flex items-center gap-1 transition-colors"
-                >
-                  <span>Join Our Team</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
-                </Link>
-              </li>
+
             </ul>
           </div>
 

@@ -291,10 +291,5 @@ export const siteImages = {
     { url: "/studio-images/kerala-bride-mountain-scenic.webp",          alt: "Traditional Kerala bridal portrait — kasavu saree by scenic waters" },
   ],
 
-  // Careers / studio ambience
-  careers: {
-    hero: "/studio-images/studio-exterior-day.webp",
-    team: "/studio-images/bridal-makeup-artist-working.webp",
-  },
 };
 

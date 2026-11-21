@@ -50,14 +50,17 @@ export default function GallerySection({ index = "08" }: GallerySectionProps) {
           {row1.map((item, idx) => (
             <div
               key={`row1-${idx}`}
-              className="relative w-56 sm:w-64 md:w-72 h-80 sm:h-96 rounded-salon overflow-hidden shadow-soft border border-hairline shrink-0 group bg-ivory"
+              style={{ transform: "translateZ(0)", isolation: "isolate" }}
+              className="relative w-56 sm:w-64 md:w-72 h-80 sm:h-96 rounded-salon overflow-hidden shadow-soft border border-hairline shrink-0 group bg-ivory transform-gpu"
             >
               <Image
                 src={item.url}
                 alt={item.alt}
                 fill
                 sizes="(max-width: 640px) 224px, 288px"
-                className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out transform-gpu"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-espresso/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                 <span className="text-xs text-ivory font-sans font-medium line-clamp-1">
@@ -73,14 +76,17 @@ export default function GallerySection({ index = "08" }: GallerySectionProps) {
           {row2.map((item, idx) => (
             <div
               key={`row2-${idx}`}
-              className="relative w-56 sm:w-64 md:w-72 h-80 sm:h-96 rounded-salon overflow-hidden shadow-soft border border-hairline shrink-0 group bg-ivory"
+              style={{ transform: "translateZ(0)", isolation: "isolate" }}
+              className="relative w-56 sm:w-64 md:w-72 h-80 sm:h-96 rounded-salon overflow-hidden shadow-soft border border-hairline shrink-0 group bg-ivory transform-gpu"
             >
               <Image
                 src={item.url}
                 alt={item.alt}
                 fill
                 sizes="(max-width: 640px) 224px, 288px"
-                className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out transform-gpu"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-espresso/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                 <span className="text-xs text-ivory font-sans font-medium line-clamp-1">

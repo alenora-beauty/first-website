@@ -40,20 +40,4 @@ export const studioFaqs: FAQItem[] = [
     category: "bridal",
     tag: "Saree & Henna",
   },
-  {
-    id: "faq-products",
-    question: "Which products and brands do you use?",
-    answer:
-      "We use certified global professional salon brands known for safety, hair health, and dermatological efficacy—including L'Oreal Professional, Matrix, Schwarzkopf, Aroma Magic, VLCC, Vedic Line, and Cheryl's Cosmeceuticals.",
-    category: "services",
-    tag: "Products & Safety",
-  },
-  {
-    id: "faq-cancellation",
-    question: "What is your cancellation and rescheduling policy?",
-    answer:
-      "We kindly ask for at least 4 to 6 hours notice if you need to reschedule or cancel your standard appointment. For bridal parties and private studio block bookings, a 48-hour advance notice is appreciated.",
-    category: "booking",
-    tag: "Studio Policies",
-  },
 ];

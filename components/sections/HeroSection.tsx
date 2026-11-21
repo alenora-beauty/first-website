@@ -98,13 +98,16 @@ export default function HeroSection() {
           >
             {/* Ambient soft glow backdrop only for contain mode (matching background color seamlessly) */}
             {activeSlide.fit === "contain" && (
-              <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+              <div
+                className="absolute inset-0 z-0 overflow-hidden pointer-events-none transform-gpu"
+                style={{ transform: "translateZ(0)", isolation: "isolate" }}
+              >
                 <Image
                   src={activeSlide.url}
                   alt=""
                   fill
                   quality={60}
-                  className="object-cover blur-3xl opacity-35 scale-110"
+                  className="object-cover blur-3xl opacity-35 scale-110 transform-gpu"
                 />
               </div>
             )}

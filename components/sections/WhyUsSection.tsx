@@ -88,9 +88,11 @@ export default function WhyUsSection() {
             {whyReasons.map((reason, index) => (
               <div
                 key={reason.id}
-                className="sticky rounded-salon bg-cream border border-hairline p-6 sm:p-8 shadow-elevated transition-transform duration-300"
+                className="sticky rounded-salon bg-cream border border-hairline p-6 sm:p-8 shadow-elevated transform-gpu"
                 style={{
                   top: `calc(100px + ${index * 24}px)`,
+                  transform: "translateZ(0)",
+                  isolation: "isolate",
                 }}
               >
                 <div className="flex items-center justify-between border-b border-hairline pb-4 mb-6">
@@ -104,13 +106,18 @@ export default function WhyUsSection() {
                   </div>
                 </div>
 
-                <div className="relative h-56 sm:h-72 rounded-2xl overflow-hidden mb-6 shadow-soft">
+                <div
+                  className="relative h-56 sm:h-72 rounded-2xl overflow-hidden mb-6 shadow-soft transform-gpu"
+                  style={{ transform: "translateZ(0)", isolation: "isolate" }}
+                >
                   <Image
                     src={reason.image}
                     alt={reason.title}
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="object-cover"
+                    className="object-cover transform-gpu"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-espresso/40 to-transparent" />
                 </div>

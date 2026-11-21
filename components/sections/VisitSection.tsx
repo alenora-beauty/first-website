@@ -24,17 +24,23 @@ export default function VisitSection() {
           {steps.map((stepItem) => (
             <div
               key={stepItem.step}
-              className="rounded-salon bg-ivory border border-hairline p-6 shadow-soft hover:shadow-elevated transition-all duration-300 flex flex-col justify-between group"
+              style={{ transform: "translateZ(0)", isolation: "isolate" }}
+              className="rounded-salon bg-ivory border border-hairline p-6 shadow-soft hover:shadow-elevated transition-all duration-300 flex flex-col justify-between group transform-gpu"
             >
               <div>
                 {/* Image & duration badge */}
-                <div className="relative h-48 rounded-2xl overflow-hidden mb-6 bg-coffee/5 shadow-soft">
+                <div
+                  className="relative h-48 rounded-2xl overflow-hidden mb-6 bg-coffee/5 shadow-soft transform-gpu"
+                  style={{ transform: "translateZ(0)", isolation: "isolate" }}
+                >
                   <Image
                     src={stepItem.image}
                     alt={stepItem.title}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500 transform-gpu"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-espresso/60 via-transparent to-transparent" />
 

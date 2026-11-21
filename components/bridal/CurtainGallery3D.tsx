@@ -189,10 +189,9 @@ export default function CurtainGallery3D({
     return () => cancelAnimationFrame(animationId);
   }, [autoScrollSpeed, scrollDamping, layout.heights]);
 
-  // Wheel listener
+  // Wheel listener - smooth responsive nudge without blocking page scroll
   const handleWheel = useCallback((e: WheelEvent) => {
-    e.preventDefault();
-    targetScrollY.current += e.deltaY * 0.85;
+    targetScrollY.current += e.deltaY * 0.45;
   }, []);
 
   // Mouse & Touch interaction
@@ -222,7 +221,7 @@ export default function CurtainGallery3D({
     const container = containerRef.current;
     if (!container || typeof window === "undefined") return;
 
-    container.addEventListener("wheel", handleWheel, { passive: false });
+    container.addEventListener("wheel", handleWheel, { passive: true });
     return () => {
       container.removeEventListener("wheel", handleWheel);
     };
@@ -338,11 +337,13 @@ export default function CurtainGallery3D({
                             setSelectedImage(item);
                           }
                         }}
-                        className="curtain-card group relative overflow-hidden bg-cream border border-gold/30 shadow-elevated"
+                        className="curtain-card group relative overflow-hidden bg-cream border border-gold/30 shadow-elevated transform-gpu"
                         style={{
                           height: `${item.height}px`,
                           borderRadius: `${itemRoundness}px`,
                           cursor: "pointer",
+                          transform: "translateZ(0)",
+                          isolation: "isolate",
                         }}
                       >
                         <Image
@@ -350,8 +351,10 @@ export default function CurtainGallery3D({
                           alt={item.alt || "Alenora Bridal Studio signature makeover"}
                           fill
                           sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                          quality={95}
-                          className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                          quality={85}
+                          loading="lazy"
+                          decoding="async"
+                          className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out transform-gpu"
                           draggable={false}
                         />
 

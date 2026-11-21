@@ -88,14 +88,18 @@ export default function ReviewsSection({ index = "07" }: ReviewsSectionProps) {
       onMouseLeave={() => setIsPaused(false)}
     >
       {/* ── Background: Standard Elegant Beauty Salon Interior ── */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      <div
+        className="absolute inset-0 pointer-events-none overflow-hidden transform-gpu"
+        style={{ transform: "translateZ(0)", isolation: "isolate" }}
+      >
         <Image
           src="/images/testimonials-bg.webp"
           alt="Alenora luxury beauty studio ambiance"
           fill
           unoptimized
-          priority
           sizes="100vw"
+          loading="lazy"
+          decoding="async"
           className="object-cover object-center opacity-60 filter contrast-105 scale-100"
         />
         {/* Balanced warm ivory / cream gradient overlay keeping the salon interior clearly visible */}

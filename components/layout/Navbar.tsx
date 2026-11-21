@@ -15,11 +15,14 @@ export default function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      if (window.scrollY > 40) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 40);
+          ticking = false;
+        });
+        ticking = true;
       }
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -50,6 +53,7 @@ export default function Navbar() {
   return (
     <>
       <header
+        style={{ transform: "translateZ(0)" }}
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${navBackground}`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -215,20 +219,7 @@ export default function Navbar() {
                 </motion.div>
               ))}
 
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.3 }}
-              >
-                <Link
-                  href="/careers"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="text-gold/90 text-sm uppercase tracking-widest font-sans flex items-center gap-2 pt-2"
-                >
-                  <span>Careers &amp; Opportunities</span>
-                  <ArrowUpRight className="w-4 h-4" />
-                </Link>
-              </motion.div>
+
             </nav>
 
             {/* Bottom Actions and Contact Info */}

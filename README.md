@@ -19,7 +19,6 @@ Al-Enora/
 │   ├── services/page.tsx         # /services: Complete categorized menu & package offers
 │   ├── gallery/page.tsx          # /gallery: Filterable visual journal & Instagram link
 │   ├── contact/page.tsx          # /contact: Address, map, hours & direct WhatsApp
-│   ├── careers/page.tsx          # /careers: "Female all-rounder" hiring & WhatsApp application
 │   ├── privacy/page.tsx          # /privacy: Privacy policy
 │   ├── terms/page.tsx            # /terms: Terms of service & appointment policies
 │   ├── globals.css               # Design tokens, ivory/coffee theme, scrollbar & utilities
@@ -40,7 +39,7 @@ Al-Enora/
 │   │   ├── ServiceMenuSection.tsx# 03. 5-category accordion & featured Groom package
 │   │   ├── WhyUsSection.tsx      # 04. Stacking sticky cards (4 reasons)
 │   │   ├── TransformationsSection.tsx # 05. Before/after slider & case study switcher
-│   │   ├── TeamSection.tsx       # 06. 4 portrait cards & careers hiring banner
+│   │   ├── TeamSection.tsx       # 06. 4 portrait cards displaying lead cosmetologists and stylists
 │   │   ├── VisitSection.tsx      # 07. 4-step appointment journey with duration badges
 │   │   ├── ReviewsSection.tsx    # 08. Conditional reviews (governed by showReviews flag)
 │   │   ├── GallerySection.tsx    # 09. Dual-row reverse autoscroll marquee
