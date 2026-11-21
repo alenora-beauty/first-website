@@ -77,28 +77,19 @@ export default function BookingSection({ index = "11" }: BookingSectionProps) {
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitError("");
     if (!validate()) return;
 
     setIsSubmitting(true);
     try {
-      const res = await fetch("/api/booking", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      const json = await res.json();
-      if (!res.ok) {
-        throw new Error(json.error || "Failed to submit appointment request.");
-      }
-
+      const waLink = getDynamicWhatsAppLink();
+      window.open(waLink, "_blank", "noopener,noreferrer");
       setIsSuccess(true);
     } catch (err: any) {
       setSubmitError(
-        err.message || "Something went wrong. Please connect with us directly on WhatsApp."
+        "Could not launch WhatsApp. Please click the 'Book on WhatsApp' button below directly."
       );
     } finally {
       setIsSubmitting(false);
@@ -236,8 +227,7 @@ export default function BookingSection({ index = "11" }: BookingSectionProps) {
                   Appointment Request Sent
                 </h3>
                 <p className="text-muted font-sans max-w-md mx-auto text-sm leading-relaxed">
-                  Thank you! Our studio team will review your requested time slot
-                  and message or call you at <strong>{formData.phone}</strong> to confirm.
+                  Thank you! WhatsApp has been opened with your appointment details. Our studio team will review your requested time slot and confirm promptly with you.
                 </p>
                 <div className="pt-4 flex flex-wrap justify-center gap-4">
                   <Button
